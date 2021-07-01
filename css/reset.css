@@ -1,0 +1,96 @@
+:root {
+  --gray1: #323b4b;
+  --gray2: #5b647b;
+  --gray3: #828282;
+  --gray4: #e7e7e7;
+  --gray5: #323232;
+  --gray6: #5a6b7b;
+
+  --wine1: #90143c;
+  --wine2: #89143a;
+  --wine3: #811337;
+
+  --button--gradient1: linear-gradient(
+    90deg,
+    rgba(255, 7, 87, 0.18) 5.04%,
+    #ff0757 108.64%
+  );
+  --button--gradient2: linear-gradient(90deg, #ff0757 5.04%, #ff0757 108.64%);
+
+  --lightbrown: #d9a863;
+  --lightred: #fc0455;
+  --orange: #feaa3f;
+
+  --white: #fff;
+  --black: #000;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  :root {
+    scroll-behavior: smooth;
+  }
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+  list-style: none;
+  outline: none;
+  text-decoration: none;
+
+  font-size: 1.8rem;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  background-color: transparent;
+  cursor: pointer;
+}
+
+ul,
+ol {
+  margin: 0;
+}
+
+/* GRID */
+.container-fluid {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.container-fav {
+  width: 100%;
+  max-width: calc(1200px + 30px);
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+@media (max-width: 992px) {
+}
+
+@media only screen and (max-width: 600px) {
+  /* html {
+    font-size: 40%;
+  } */
+
+  /* .row{
+    margin: 0!important;
+  } */
+}

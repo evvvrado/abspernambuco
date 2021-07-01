@@ -1,0 +1,206 @@
+/* CUSTOM DEF */
+h1,
+h2 {
+  font-family: "Share Tech", sans-serif;
+}
+h1 {
+  font-size: 6.9rem;
+  line-height: 93.5%;
+  color: var(--white);
+}
+h2 {
+  font-size: 4.2rem;
+  line-height: 120%;
+  color: var(--gray1);
+}
+h3 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 120%;
+  color: var(--lightred);
+}
+h4 {
+  font-family: "Share Tech", sans-serif;
+  font-size: 2.4rem;
+  line-height: 93.5%;
+}
+p {
+  font-family: "Inter", sans-serif;
+  line-height: 160%;
+}
+
+a {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+}
+
+.btn-primary {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  list-style: 2.4rem;
+  font-size: 1.6rem;
+  color: var(--white);
+}
+body {
+  background-color: black;
+}
+section.s_welcome {
+  display: flex;
+  background-color: var(--gray4);
+
+  height: 4rem;
+  background-color: linear-gradient(180deg, #8a143a 0%, #4f1a2b 100%);
+}
+
+section.s_welcome {
+  font-family: "Poppins", sans-serif;
+  color: #0f4b57;
+}
+section.s_welcome .main,
+section.s_welcome .welcome_item,
+section.s_welcome .content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+section.s_welcome .main .text span {
+  font-size: 1.4rem;
+}
+section.s_welcome .main .text span a {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--wine3);
+}
+
+section.s_welcome .content {
+  width: 100%;
+  max-width: 34rem;
+}
+section.s_welcome .content .phone {
+  margin-right: 1rem;
+}
+section.s_welcome .content span {
+  font-size: 1.1rem;
+  line-height: 125%;
+  color: var(--gray6);
+}
+section.s_welcome .content .social {
+  gap: 1.7rem;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+
+  height: 12.4rem;
+  background: linear-gradient(180deg, #8a143a 0%, #4f1a2b 100%);
+}
+
+header .container-fav,
+section.s_welcome .container-fav {
+  max-width: 1560px;
+}
+
+header .h_gradient {
+  position: absolute;
+  top: -4rem;
+  left: 0;
+  pointer-events: none;
+  opacity: 30%;
+
+  width: 100%;
+  height: calc(100% + 4rem);
+}
+
+header main,
+header ._hi {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header main ._hi.logos a {
+  display: inline-block;
+}
+header main ._hi.logos {
+  width: 100%;
+  max-width: 21.3rem;
+}
+
+header main nav {
+  display: flex;
+  justify-content: center;
+
+  width: 100%;
+  max-width: 95.5rem;
+}
+
+header main nav ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header main nav ul li a {
+  color: var(--white);
+}
+
+header main nav ul li a.mi-active {
+  color: var(--lightbrown);
+  border-bottom: 3px solid var(--lightbrown);
+  padding-bottom: 4.7rem;
+}
+
+header main button.btn-primary {
+  height: 4.4rem;
+
+  padding: 1rem 5.5rem;
+  background: var(--button--gradient1);
+  border: 1px solid #ff0052;
+}
+
+header main button.hamburguer-menu {
+  display: none;
+}
+/* RESPONSIVO */
+
+@media (max-width: 1400px) {
+  header main nav {
+    max-width: 60%;
+  }
+}
+
+@media (max-width: 1200px) {
+  header main nav,
+  header main button.btn-primary {
+    display: none;
+  }
+
+  header main button.hamburguer-menu {
+    display: inline-block;
+  }
+}
+@media (max-width: 992px) {
+  section.s_welcome .text {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  section.s_welcome .content {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  section.s_welcome .main .text span a,
+  section.s_welcome .main .text span {
+    font-size: 1.5rem;
+  }
+}
