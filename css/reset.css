@@ -9,6 +9,8 @@
   --wine1: #90143c;
   --wine2: #89143a;
   --wine3: #811337;
+  --wine4: #570d25;
+  --wine5: #90143c;
 
   --button--gradient1: linear-gradient(
     90deg,
@@ -86,9 +88,9 @@ ol {
 }
 
 @media only screen and (max-width: 600px) {
-  /* html {
+  html {
     font-size: 40%;
-  } */
+  }
 
   /* .row{
     margin: 0!important;

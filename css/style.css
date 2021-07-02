@@ -7,11 +7,13 @@ h1 {
   font-size: 6.9rem;
   line-height: 93.5%;
   color: var(--white);
+  font-weight: normal;
 }
 h2 {
   font-size: 4.2rem;
   line-height: 120%;
   color: var(--gray1);
+  font-weight: 400;
 }
 h3 {
   font-family: "Poppins", sans-serif;
@@ -43,9 +45,18 @@ a {
   list-style: 2.4rem;
   font-size: 1.6rem;
   color: var(--white);
+  transition: 0.32s ease-in-out;
 }
-body {
-  background-color: black;
+.btn-primary:hover {
+  transform: scale(1.1);
+  background-color: var(--orange);
+}
+.btn-alternative {
+  transition: 0.32s ease-in-out;
+}
+.btn-alternative:hover {
+  transform: scale(1.1);
+  background: var(--wine3);
 }
 section.s_welcome {
   display: flex;
@@ -145,6 +156,12 @@ header main nav ul {
   justify-content: space-between;
   align-items: center;
 }
+header main nav ul li a {
+  transition: 0.32s ease-in-out;
+}
+header main nav ul li a:hover {
+  color: var(--lightbrown);
+}
 
 header main nav ul li a {
   color: var(--white);
@@ -167,11 +184,368 @@ header main button.btn-primary {
 header main button.hamburguer-menu {
   display: none;
 }
+
+section.s_hero {
+  display: flex;
+  align-items: center;
+
+  height: 61.3rem;
+  background: url("/img/bannerhero.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+section.s_hero .container-fav {
+  display: flex;
+  align-items: center;
+}
+
+section.s_hero .container-fav .text {
+  width: 100%;
+  max-width: 57.3rem;
+  height: 51.6rem;
+  border: solid 1px white;
+  padding: 1.6rem 2.4rem 2.6rem 3.2rem;
+}
+section.s_hero .container-fav .text .curso_online {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2.5rem;
+  gap: 0.8rem;
+}
+section.s_hero .container-fav .text p {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: var(--white);
+}
+section.s_hero .container-fav .text .info {
+  margin-top: 3rem;
+}
+section.s_hero .container-fav .text .info h1 {
+  font-size: 7.4rem;
+  line-height: 7.5rem;
+  text-transform: capitalize;
+
+  margin-bottom: 4.7rem;
+}
+section.s_hero .container-fav .text .info span.lowsized {
+  font-size: 4.6rem;
+}
+section.s_hero .container-fav .text button.btn-primary {
+  padding: 1rem 4.1rem;
+  background-image: var(--button--gradient2);
+}
+section.s_hero .hero_cards {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 30.5rem;
+
+  position: absolute;
+
+  bottom: 1.5px;
+  right: 36rem;
+}
+section.s_hero .hero_cards div img {
+  height: 2rem;
+}
+section.s_hero .hero_cards div {
+  display: flex;
+  align-items: flex-end;
+  max-width: 100%;
+  width: 14.7rem;
+  height: 4.5rem;
+  background-color: var(--white);
+  gap: 0.4rem;
+  padding: 1rem 2.1rem 1.3rem 2.9rem;
+}
+section.s_hero .hero_cards span {
+  font-family: "Spartan", sans-serif;
+  font-size: 1.3rem;
+
+  color: var(--wine1);
+}
+
+section.s_hero .container-fav .hero_indicator {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 7rem;
+  margin-top: 57.6rem;
+}
+
+section.s_cursos {
+  height: 149.8rem;
+  padding-top: 14.8rem;
+  padding-bottom: 9.1rem;
+  background: url(/img/backconfira.jpg);
+  background-size: cover;
+}
+section.s_cursos .container-fav {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+section.s_cursos .container-fav .content {
+  width: 100%;
+  max-width: 79.8rem;
+}
+section.s_cursos .container-fav .title {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 3.5rem;
+}
+section.s_cursos .container-fav .title:nth-child(3) {
+  margin-top: 4rem;
+}
+section.s_cursos .container-fav .title h2 {
+  color: var(--white);
+
+  font-size: 4rem;
+  max-width: 35.8rem;
+  line-height: 100%;
+}
+section.s_cursos .container-fav .title p {
+  color: var(--white);
+  font-size: 1.6rem;
+  max-width: 34.6rem;
+}
+
+section.s_cursos .container-fav .curso-group {
+  display: flex;
+  justify-content: space-between;
+}
+section.s_cursos .container-fav .curso-group .curso-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+section.s_cursos .container-fav .curso-group .curso-item .curso-pic {
+  position: relative;
+}
+
+section.s_cursos
+  .container-fav
+  .curso-group
+  .curso-item
+  .curso-pic
+  .curso_online {
+  position: absolute;
+  top: 1.7rem;
+  left: 1.6rem;
+  display: flex;
+  gap: 0.8rem;
+
+  color: var(--white);
+}
+section.s_cursos .container-fav .curso-group .curso-item .curso-content {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  flex-direction: column;
+  background-color: var(--white);
+  width: 100%;
+  max-width: 36.7rem;
+  height: 28.1rem;
+  border-radius: 9px;
+  margin-top: -4.8rem;
+
+  position: relative;
+  z-index: 1;
+  padding-top: 1.6rem;
+  padding-bottom: 2.2rem;
+  box-shadow: 0px 9px 28px -1px rgba(232, 31, 96, 0.5);
+
+  transition: 2s;
+  animation: moviment ease-in-out 4s infinite alternate;
+}
+section.s_cursos .container-fav .curso-group .curso-item .curso-content:hover {
+  animation: none;
+}
+section.s_cursos .container-fav .curso-group .curso-item .curso-content .row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+section.s_cursos
+  .container-fav
+  .curso-group
+  .curso-item
+  .curso-content
+  .row:first-child {
+  gap: 1.8rem;
+}
+section.s_cursos
+  .container-fav
+  .curso-group
+  .curso-item
+  .curso-content
+  .row
+  .icon-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  height: 5rem;
+  max-width: 6.4rem;
+}
+section.s_cursos
+  .container-fav
+  .curso-group
+  .curso-item
+  .curso-content
+  .row
+  .icon-group
+  span {
+  font-family: "Share Tech";
+  font-size: 1.6rem;
+  line-height: 93.5%;
+  margin-top: 1rem;
+  color: var(--wine4);
+}
+
+section.s_cursos
+  .container-fav
+  .curso-group
+  .curso-item
+  .curso-content
+  .row
+  .text {
+  display: flex;
+}
+section.s_cursos
+  .container-fav
+  .curso-group
+  .curso-item
+  .curso-content
+  .row
+  .text
+  span {
+  font-family: "Share Tech", sans-serif;
+  font-size: 2.4rem;
+  line-height: 93.5%;
+  max-width: 17.6rem;
+  margin-left: 1rem;
+}
+section.s_cursos
+  .container-fav
+  .curso-group
+  .curso-item
+  .curso-content
+  .row
+  .price {
+  font-family: "Share Tech", sans-serif;
+  font-size: 40px;
+  line-height: 40px;
+
+  color: var(--wine5);
+}
+
+section.s_cursos .container-fav .content .btn-case {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5.7rem;
+}
+section.s_cursos .container-fav .content button.btn-primary {
+  height: 4.4rem;
+  padding: 1rem 5.5rem;
+  background: var(--button--gradient1);
+  border: 1px solid #ff0052;
+}
+
+section.s_cursos
+  .container-fav
+  .curso-group
+  .curso-item
+  .curso-content
+  .row
+  button.btn-primary {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  padding: 1rem 3.1rem;
+  margin-top: 0;
+  background-image: var(--button--gradient2);
+}
+section.s_quem {
+  background-image: url(/img/backquemsomos.jpg);
+  height: 81.9rem;
+  padding-top: 5.4rem;
+
+  text-align: center;
+}
+section.s_quem .container-fav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+section.s_quem .container-fav .title {
+  width: 100%;
+  max-width: 73.1rem;
+}
+section.s_quem .container-fav .title h3 {
+  margin-bottom: 0.8rem;
+}
+section.s_quem .container-fav .title h2 {
+  margin-bottom: 1.4rem;
+}
+section.s_quem .container-fav .title p {
+  margin-bottom: 11.5rem;
+  line-height: 160%;
+  color: var(--gray1);
+}
+
+section.s_quem .container-fav ._options {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+section.s_quem .container-fav ._options div {
+  max-width: 33.6rem;
+}
+section.s_quem .container-fav ._options div h4 {
+  font-family: "Share Tech", sans-serif;
+  font-weight: normal;
+  line-height: 140%;
+  margin-bottom: 0.8rem;
+
+  text-align: center;
+
+  color: #90143c;
+}
+section.s_quem .container-fav ._options div p {
+  font-family: Inter;
+  line-height: 160%;
+
+  margin-bottom: 1.4rem;
+
+  color: var(--gray1);
+}
+section.s_quem .container-fav ._options div button.btn-alternative {
+  padding-top: 1rem 4.2rem;
+  height: 4.5rem;
+  width: 17.9rem;
+  font-size: 1.6rem;
+  background: var(--white);
+  color: var(--lightbrown);
+}
+
 /* RESPONSIVO */
 
 @media (max-width: 1400px) {
   header main nav {
     max-width: 60%;
+  }
+  section.s_hero .hero_cards {
+    right: 20rem;
   }
 }
 
@@ -183,6 +557,23 @@ header main button.hamburguer-menu {
 
   header main button.hamburguer-menu {
     display: inline-block;
+  }
+  section.s_hero {
+    height: 68rem;
+  }
+  section.s_hero {
+    flex-direction: column-reverse;
+  }
+  section.s_hero .hero_cards {
+    position: static;
+  }
+  section.s_hero .container-fav {
+    gap: 4.5rem;
+    flex-direction: column;
+  }
+  section.s_hero .container-fav .hero_indicator {
+    margin-top: 0;
+    margin-bottom: 2.5rem;
   }
 }
 @media (max-width: 992px) {
@@ -203,4 +594,36 @@ header main button.hamburguer-menu {
   section.s_welcome .main .text span {
     font-size: 1.5rem;
   }
+
+  section.s_hero {
+    height: auto;
+    padding: 20px;
+  }
+  section.s_hero .container-fav .text {
+    height: auto;
+  }
+  section.s_hero .container-fav .hero_indicator {
+    gap: 5px;
+    width: auto;
+  }
+}
+
+@keyframes moviment {
+  to {
+    transform: translateX(-5px);
+  }
+  from {
+    transform: translateX(5px);
+  }
+}
+
+.showin {
+  opacity: 0;
+  transition: 0.5s;
+  transform: translateY(50px);
+}
+
+.anime-start {
+  opacity: 1;
+  transform: translateY(0);
 }
