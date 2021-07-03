@@ -5,12 +5,17 @@
   --gray4: #e7e7e7;
   --gray5: #323232;
   --gray6: #5a6b7b;
+  --gray7: #676767;
+  --gray8: #4b5368;
+  --gray9: #2c3037;
 
   --wine1: #90143c;
   --wine2: #89143a;
   --wine3: #811337;
   --wine4: #570d25;
   --wine5: #90143c;
+  --wine6: #560d24;
+  --wine7: rgba(218, 41, 28, 0.3);
 
   --button--gradient1: linear-gradient(
     90deg,
@@ -18,6 +23,8 @@
     #ff0757 108.64%
   );
   --button--gradient2: linear-gradient(90deg, #ff0757 5.04%, #ff0757 108.64%);
+
+  --background-gradient: linear-gradient(180deg, #8a143a 0%, #671832 100%);
 
   --lightbrown: #d9a863;
   --lightred: #fc0455;
