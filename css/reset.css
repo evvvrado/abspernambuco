@@ -8,6 +8,9 @@
   --gray7: #676767;
   --gray8: #4b5368;
   --gray9: #2c3037;
+  --gray10: #3b3e40;
+  --gray11: rgba(183, 177, 177, 0.5);
+  --gray12: #686868;
 
   --wine1: #90143c;
   --wine2: #89143a;
@@ -16,6 +19,7 @@
   --wine5: #90143c;
   --wine6: #560d24;
   --wine7: rgba(218, 41, 28, 0.3);
+  --wine8: #da291c;
 
   --button--gradient1: linear-gradient(
     90deg,

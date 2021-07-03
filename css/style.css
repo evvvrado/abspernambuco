@@ -168,12 +168,27 @@ header main nav ul li a:hover {
 
 header main nav ul li a {
   color: var(--white);
+  padding-bottom: 4.7rem;
 }
 
-header main nav ul li a.mi-active {
+body._home header main nav ul._hi li:first-child a {
   color: var(--lightbrown);
   border-bottom: 3px solid var(--lightbrown);
-  padding-bottom: 4.7rem;
+}
+
+body._cursos-e-eventos header main nav ul._hi li:nth-child(2) a {
+  color: var(--lightbrown);
+  border-bottom: 3px solid var(--lightbrown);
+}
+
+body._imprensa header main nav ul._hi li:last-child a {
+  color: var(--lightbrown);
+  border-bottom: 3px solid var(--lightbrown);
+}
+
+body._quem-somos header main nav ul._hi li:nth-child(3) a {
+  color: var(--lightbrown);
+  border-bottom: 3px solid var(--lightbrown);
 }
 
 header main button.btn-primary {
@@ -202,6 +217,19 @@ section.s_hero {
 section.s_hero .container-fav {
   display: flex;
   align-items: center;
+}
+
+body._cursos-e-eventos section.s_hero {
+  height: 32.7rem;
+  background-image: url("/img/bannercursos.jpg");
+}
+body._imprensa section.s_hero {
+  height: 32.7rem;
+  background-image: url("/img/bannerimprensa.jpg");
+}
+body._quem-somos section.s_hero {
+  height: 32.7rem;
+  background-image: url("/img/bannercurso.jpg");
 }
 
 section.s_hero .container-fav .text {
@@ -286,6 +314,10 @@ section.s_cursos {
   background: url(/img/backconfira.jpg);
   background-size: cover;
 }
+body._cursos-e-eventos section.s_cursos {
+  height: 117.8rem;
+  margin-bottom: 25.2rem;
+}
 section.s_cursos .container-fav {
   display: flex;
   justify-content: center;
@@ -305,6 +337,9 @@ section.s_cursos .container-fav .title {
 section.s_cursos .container-fav .title:nth-child(3) {
   margin-top: 4rem;
 }
+body._cursos-e-eventos section.s_cursos ._eventos {
+  display: none;
+}
 section.s_cursos .container-fav .title h2 {
   color: var(--white);
 
@@ -316,6 +351,48 @@ section.s_cursos .container-fav .title p {
   color: var(--white);
   font-size: 1.6rem;
   max-width: 34.6rem;
+}
+
+body._cursos-e-eventos section.s_cursos .container-fav .title:nth-child(2) {
+  margin-top: 4rem;
+}
+
+body._cursos-e-eventos section.s_cursos .container-fav .title:first-child {
+  justify-content: center;
+}
+body._cursos-e-eventos
+  section.s_cursos
+  .container-fav
+  .title
+  nav._filter
+  h2:first-child {
+  padding-right: 9rem;
+  padding-left: 6.1rem;
+}
+body._cursos-e-eventos section.s_cursos .container-fav .title nav._filter h2 {
+  font-size: 4rem;
+  text-align: center;
+
+  border-bottom: 3px solid #c4c4c4;
+  cursor: pointer;
+  padding-left: 7.2rem;
+  padding-bottom: 0.5rem;
+  padding-right: 6.6rem;
+}
+
+body._cursos-e-eventos
+  section.s_cursos
+  .container-fav
+  .title
+  nav._filter
+  h2._active {
+  border-bottom: 3px solid var(--lightbrown);
+}
+body._cursos-e-eventos section.s_cursos .container-fav .title nav._filter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* max-width: 47.1rem; */
 }
 
 section.s_cursos .container-fav .curso-group {
@@ -886,6 +963,141 @@ section.s_parceiros .container-fav ._partnes {
   gap: 7.4rem;
 }
 
+body._imprensa section.s_acessoria {
+  padding-top: 9.9rem;
+  padding-bottom: 28.9rem;
+}
+body._imprensa section.s_acessoria .container-fav {
+  display: flex;
+  justify-content: space-between;
+
+  width: 100%;
+  max-width: 77.4rem;
+}
+body._imprensa section.s_acessoria .container-fav h4 {
+  font-size: 2.2rem;
+  color: var(--gray9);
+  font-weight: 400;
+}
+
+body._imprensa section.s_acessoria .container-fav p {
+  font-size: 1.6rem;
+  line-height: 140%;
+  color: var(--gray10);
+}
+
+body._imprensa section.s_acessoria .container-fav ._right {
+  width: 100%;
+  max-width: 44.1rem;
+
+  margin-top: 2.9rem;
+}
+
+body._imprensa section.s_acessoria .container-fav ._right h4 {
+  margin-bottom: 1.2rem;
+}
+body._imprensa section.s_acessoria .container-fav ._right ._text p {
+  padding-bottom: 3rem;
+  border-bottom: solid 1px rgba(165, 165, 165, 0.3);
+}
+
+body._imprensa section.s_acessoria .container-fav ._right ._info {
+  margin-top: 6.3rem;
+}
+body._imprensa section.s_acessoria .container-fav ._right ._info span {
+  font-family: "Montserrat";
+  font-weight: bold;
+  font-size: 2rem;
+  line-height: 130%;
+
+  color: var(--wine8);
+  margin-right: 0.9rem;
+}
+
+body._imprensa section.s_acessoria .container-fav ._right ._info div {
+  margin-bottom: 2rem;
+  display: flex;
+}
+
+body._imprensa section.s_acessoria .container-fav ._right ._info .svg {
+  margin-right: 2.6rem;
+}
+
+body._imprensa section.s_acessoria .container-fav ._left {
+  width: 100%;
+  max-width: 19.8rem;
+}
+
+body._imprensa section.s_acessoria .container-fav ._left button.btn-primary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 19rem;
+  height: 5.7rem;
+
+  background: var(--wine1);
+
+  margin-top: 2.4rem;
+}
+
+body._quem-somos section.s_quem-somos {
+  padding-top: 12.2rem;
+}
+body._quem-somos section.s_quem-somos .container-fav ._text {
+  width: 100%;
+  max-width: 74.1rem;
+  margin-top: 6rem;
+}
+
+body._quem-somos section.s_quem-somos .container-fav ._text h2 {
+  margin-bottom: 2.7rem;
+}
+body._quem-somos section.s_quem-somos .container-fav ._text {
+  color: var(--gray7);
+}
+
+body._quem-somos section.s_quem-somos .container-fav ._menu {
+  width: 100%;
+}
+body._quem-somos section.s_quem-somos .container-fav ._menu nav {
+  width: 100%;
+  max-width: 53.8rem;
+  margin: 0 auto;
+  display: flex;
+}
+body._quem-somos section.s_quem-somos .container-fav ._menu nav .nav-component {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  border-bottom: 2px solid var(--gray11);
+  padding-bottom: 0.9rem;
+}
+
+body._quem-somos
+  section.s_quem-somos
+  .container-fav
+  ._menu
+  nav
+  .nav-component
+  a {
+  font-family: "Share Tech", sans-serif;
+  font-size: 1.8rem;
+  line-height: 2rem;
+  text-transform: capitalize;
+
+  color: #686868;
+}
+
+body._quem-somos
+  section.s_quem-somos
+  .container-fav
+  ._menu
+  nav
+  .nav-component._active {
+  border-bottom: 2px solid var(--wine1);
+}
+
 footer {
   background: var(--background-gradient);
   padding-top: 1.7rem;
@@ -1144,6 +1356,12 @@ footer .container-fav .row:last-child div .logo7seven {
   }
   section.s_numeros .container-fav {
     flex-direction: column;
+  }
+  body._cursos-e-eventos section.s_cursos {
+    height: auto;
+  }
+  body._cursos-e-eventos section.s_cursos {
+    margin-bottom: 0;
   }
 }
 

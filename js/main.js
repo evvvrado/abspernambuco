@@ -81,3 +81,45 @@ debounce = function (func, wait, immediate) {
     }, 100)
   );
 })();
+
+$("section.s_cursos .container-fav .title ._filter h2._cursosbutton").click(
+  () => {
+    $("section.s_cursos .container-fav .title ._filter h2").removeClass(
+      "_active"
+    );
+
+    $(
+      "section.s_cursos .container-fav .title ._filter h2._cursosbutton"
+    ).addClass("_active");
+
+    $("body._cursos-e-eventos section.s_cursos ._cursos").css(
+      "display",
+      "block"
+    );
+    $("body._cursos-e-eventos section.s_cursos ._eventos").css(
+      "display",
+      "none"
+    );
+  }
+);
+
+$("section.s_cursos .container-fav .title ._filter h2._eventosbutton").click(
+  () => {
+    $("section.s_cursos .container-fav .title ._filter h2").removeClass(
+      "_active"
+    );
+
+    $(
+      "section.s_cursos .container-fav .title ._filter h2._eventosbutton"
+    ).addClass("_active");
+
+    $("body._cursos-e-eventos section.s_cursos ._eventos").css(
+      "display",
+      "block"
+    );
+    $("body._cursos-e-eventos section.s_cursos ._cursos").css(
+      "display",
+      "none"
+    );
+  }
+);
