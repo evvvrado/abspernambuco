@@ -39,6 +39,8 @@ $('a[href*="#"]')
     }
   });
 
+// ANIMAÇÃO DE FADE-IN
+
 debounce = function (func, wait, immediate) {
   var timeout;
   return function () {
@@ -82,6 +84,8 @@ debounce = function (func, wait, immediate) {
   );
 })();
 
+// CÓDIGO DE FILTRO EM CURSOS E EVENTOS
+
 $("section.s_cursos .container-fav .title ._filter h2._cursosbutton").click(
   () => {
     $("section.s_cursos .container-fav .title ._filter h2").removeClass(
@@ -123,3 +127,14 @@ $("section.s_cursos .container-fav .title ._filter h2._eventosbutton").click(
     );
   }
 );
+
+// SIDE MENU ANIMATION
+
+$("header main button.hamburguer-menu").click(() => {
+  $("div._sidemenu nav").animate(
+    {
+      maxHeight: "100%",
+    },
+    500
+  );
+});

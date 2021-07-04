@@ -66,7 +66,7 @@ section.s_welcome {
   background-color: linear-gradient(180deg, #8a143a 0%, #4f1a2b 100%);
   position: fixed;
   margin-top: -4rem;
-  z-index: 666;
+  z-index: 665;
 
   font-family: "Poppins", sans-serif;
   color: #0f4b57;
@@ -102,6 +102,30 @@ section.s_welcome .content span {
 }
 section.s_welcome .content .social {
   gap: 1.7rem;
+}
+
+div._sidemenu {
+  position: fixed;
+  top: 25px;
+  right: 0;
+
+  z-index: 666;
+}
+div._sidemenu nav {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--wine7);
+  overflow: hidden;
+  max-height: 0;
+  transition: 2s;
+}
+div._sidemenu nav a {
+  padding: 25px 25px;
+}
+div._sidemenu nav a:first-child {
+  padding-top: 34px;
+  padding-bottom: 34px;
+  background-color: var(--lightbrown);
 }
 
 header {
@@ -190,6 +214,10 @@ body._quem-somos header main nav ul._hi li:nth-child(3) a {
   color: var(--lightbrown);
   border-bottom: 3px solid var(--lightbrown);
 }
+body._blog-post header main nav ul._hi li:nth-child(5) a {
+  color: var(--lightbrown);
+  border-bottom: 3px solid var(--lightbrown);
+}
 
 header main button.btn-primary {
   height: 4.4rem;
@@ -200,6 +228,9 @@ header main button.btn-primary {
 }
 
 header main button.hamburguer-menu {
+  display: none;
+}
+div._sidemenu {
   display: none;
 }
 
@@ -230,6 +261,10 @@ body._imprensa section.s_hero {
 body._quem-somos section.s_hero {
   height: 32.7rem;
   background-image: url("/img/bannercurso.jpg");
+}
+body._blog-post section.s_hero {
+  height: 32.7rem;
+  background-image: url("/img/bannerblog.jpg");
 }
 
 section.s_hero .container-fav .text {
@@ -1043,6 +1078,7 @@ body._imprensa section.s_acessoria .container-fav ._left button.btn-primary {
 
 body._quem-somos section.s_quem-somos {
   padding-top: 12.2rem;
+  padding-bottom: 12rem;
 }
 body._quem-somos section.s_quem-somos .container-fav ._text {
   width: 100%;
@@ -1096,6 +1132,46 @@ body._quem-somos
   nav
   .nav-component._active {
   border-bottom: 2px solid var(--wine1);
+}
+
+body._blog-post section.s_post {
+  padding-top: 4rem;
+  padding-bottom: 12rem;
+}
+
+body._blog-post section.s_post .container-fav ._text {
+  width: 100%;
+  max-width: 74.1rem;
+  margin-top: 12rem;
+  color: var(--gray7);
+}
+
+body._blog-post section.s_post .container-fav ._text h2 {
+  margin-bottom: 2.7rem;
+}
+
+body._blog-post section.s_post .container-fav ._text p {
+  margin-bottom: 4rem;
+}
+body._blog-post section.s_post nav.post_topbar {
+  display: flex;
+  justify-content: space-between;
+}
+body._blog-post section.s_post nav.post_topbar .author,
+body._blog-post section.s_post nav.post_topbar .share,
+body._blog-post section.s_post nav.post_topbar .share_btn {
+  display: flex;
+  align-items: center;
+}
+body._blog-post section.s_post nav.post_topbar .author {
+  gap: 1.3rem;
+}
+body._blog-post section.s_post nav.post_topbar .share {
+  gap: 2rem;
+}
+body._blog-post section.s_post nav.post_topbar .share_btn {
+  color: var(--gray12);
+  gap: 1rem;
 }
 
 footer {
@@ -1227,6 +1303,67 @@ footer .container-fav .row:last-child div .logo7seven {
   margin-left: 1rem;
 }
 
+body._minha-conta header {
+  height: 100%;
+  margin: 0;
+
+  background: none;
+  padding: 0;
+}
+
+body._minha-conta header ._half {
+  background: var(--background-gradient);
+  height: 100vh;
+  width: 100%;
+  max-width: 55%;
+  padding-top: 8rem;
+  color: var(--white);
+  font-family: "Spartan", sans-serif;
+}
+body._minha-conta header ._half .container-fav {
+  max-width: 40rem;
+}
+body._minha-conta header ._half .container-fav div,
+body._minha-conta header ._half .container-fav a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+body._minha-conta header ._half .container-fav .logos {
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+body._minha-conta header ._half .container-fav ._back .svg {
+  max-width: 2.1rem;
+}
+body._minha-conta header ._half .container-fav ._back p {
+  font-weight: bold;
+  font-size: 1.2rem;
+  line-height: 13px;
+  margin-left: 0.7rem;
+  color: var(--white);
+}
+body._minha-conta header ._half .container-fav ._text {
+  font-size: 2.5rem;
+  line-height: 2.8rem;
+
+  margin-top: 6.8rem;
+}
+body._minha-conta header ._half .container-fav ._contact {
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 5.8rem;
+  margin-bottom: 4.2rem;
+  gap: 2rem;
+}
+
+body._minha-conta header ._half .container-fav ._contact ._c span {
+  margin-left: 0.3rem;
+}
+body._minha-conta header ._half .container-fav ._credit .logo7seven {
+  margin-left: 1rem;
+}
+
 /* RESPONSIVO */
 
 @media (max-width: 1400px) {
@@ -1245,6 +1382,9 @@ footer .container-fav .row:last-child div .logo7seven {
   }
 
   header main button.hamburguer-menu {
+    display: inline-block;
+  }
+  div._sidemenu {
     display: inline-block;
   }
   section.s_hero {
@@ -1341,6 +1481,15 @@ footer .container-fav .row:last-child div .logo7seven {
     flex-direction: column;
     gap: 25px;
   }
+
+  body._quem-somos section.s_vantagens {
+    padding-top: 0;
+  }
+  body._imprensa section.s_acessoria .container-fav {
+    flex-direction: column;
+    gap: 4rem;
+    align-items: center;
+  }
 }
 
 @media only screen and (max-width: 730px) {
@@ -1423,3 +1572,6 @@ footer .container-fav .row:last-child div .logo7seven {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* -webkit-transition: background-image 0.2s ease-in-out;
+transition: background-image 0.2s ease-in-out; */

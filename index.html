@@ -11,9 +11,6 @@
     <meta name="keywords" content="KeyWords" />
     <meta name="author" content="Everaldo Cristiano Reis Júnior" />
 
-    <!--  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-         -->
-
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
@@ -39,12 +36,32 @@
   </head>
 
   <body class="_home">
+        
+
+    <!-- MENU LATERAL -->
+    <div class="_sidemenu">
+      <nav class="_sidecontent">
+        <a href=""><img src="/img/hamburguer.svg" alt=""></a>
+        <a href="/index.html"><img src="/img/imprensaEnvelop.svg" alt=""></a>
+        <a href="/cursos-e-eventos.html"><img src="/img/imprensaEnvelop.svg" alt=""></a>
+        <a href="/quem-somos.html"><img src="/img/imprensaEnvelop.svg" alt=""></a>
+        <a href="/experiencias.html"><img src="/img/imprensaEnvelop.svg" alt="/curso.html"></a>
+        <a href="/galeria.html"><img src="/img/imprensaEnvelop.svg" alt=""></a>
+        <a href="/imprensa.html"><img src="/img/imprensaEnvelop.svg" alt=""></a>
+      </nav>
+
+    </div>
+    <!-- MENU LATERAL -->
+
+
+
+    <!-- BARRA SUPERIOR DE LOGIN E HEADER-->
     <section class="container-fluid s_welcome">
       <div class="main container-fav">
         <div class="text">
           <span
-            >Seja Bem-vindo! Faça <a href="">Login</a> ou
-            <a href="">Cadastre-se</a></span
+            >Seja Bem-vindo! Faça <a href="/minha-conta.html">Login</a> ou
+            <a href="/minha-conta.html">Cadastre-se</a></span
           >
         </div>
         <div class="content">
@@ -68,7 +85,6 @@
         </div>
       </div>
     </section>
-
     <header class="container-fluid">
       <div class="container-fav">
         <main>
@@ -88,7 +104,7 @@
               <li><a href="/cursos-e-eventos.html">Cursos e Eventos</a></li>
               <li><a href="/quem-somos.html">ABS - PE</a></li>
               <li><a href="/experiencias.html">Experiencias</a></li>
-              <li><a href="/curso.html">Curso</a></li>
+              <li><a href="/blog.html">Blog</a></li>
               <li><a href="/galeria.html">Galeria</a></li>
               <li><a href="/imprensa.html">Imprensa</a></li>
             </ul>
@@ -96,7 +112,7 @@
 
           <button class="menu-item btn-primary">Contato</a></button>
 
-          <button class="menu-item hamburguer-menu" onclick="window.open('/contato')">
+          <button class="menu-item hamburguer-menu">
             <img src="/img/hamburguer.svg" alt="" />
           </button>
 
@@ -104,7 +120,10 @@
         </main>
       </div>
     </header>
+    <!-- BARRA SUPERIOR DE LOGIN E HEADER-->
 
+
+    <!-- SECTION HERO -->
     <section class="container-fluid s_hero">
       <div class="hero_cards">
         <div>
@@ -152,7 +171,9 @@
         </div>
       </div>
     </section>
+    <!-- SECTION HERO -->
 
+    <!-- SECTIONS EXTRAS -->
     <section class="container-fluid s_cursos ">
       <div class="container-fav showin">
         <div class="content">
@@ -522,7 +543,7 @@
       <div class="container-fav">
         <div class="text">
           <h2>Blog</h2>
-          <button class="btn-primary">Acessar blog</button>
+          <button class="btn-primary" onclick="window.location.href = '/blog.html' ">Acessar blog</button>
         </div>
         <div class="blog-group">
           <div class="blog-item">
@@ -594,7 +615,7 @@
                 <div class="text">
                   <span>Simply dummy text of the printing  typesetting industry. </span>
                 </div>
-                <button class="btn-alternative">
+                <button class="btn-alternative" onclick="window.location.href = '/blog-post.html'">
                   LEIA MAIS
                 </button>
               </div>
@@ -603,7 +624,6 @@
         </div>
       </div>
     </section>
-
 
     <section class="container-fluid s_parceiros">
       <div class="container-fav">
@@ -626,7 +646,9 @@
         </div>
       </div>
     </section>
+    <!-- SECTIONS EXTRAS -->
 
+    <!-- FOOTER / FIM DO SITE -->
     <footer class="container-fluid">
       <div class="container-fav">
         <div class="row">
@@ -634,7 +656,7 @@
             <img src="/img/_logo91.png" alt="">
             <img src="/img/_logoASI_91.png" alt="">
           </div>
-          <button class="btn-primary">Minha conta</button>
+          <button class="btn-primary" onclick="window.location.href = '/minha-conta.html'">Minha conta</button>
         </div>
         <div class="row">
           <div class="endereco">
@@ -673,9 +695,8 @@
           </div>
       </div>
     </footer>
+    <!-- FOOTER / FIM DO SITE -->
     
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js " integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1 " crossorigin="anonymous "></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js " integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns " crossorigin="anonymous "></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/js/all.min.js "></script>
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery-ui.js"></script>
