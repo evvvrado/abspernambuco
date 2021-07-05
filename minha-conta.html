@@ -36,7 +36,7 @@
   </head>
 
   <body class="_minha-conta">
-    <header class="">
+    <header>
       <div class="_half">
         <div class="container-fav">
           <div class="logos">
@@ -87,9 +87,102 @@
         </div>
       </div>
 
-      <div class="_login"></div>
-      <div class="_register"></div>
-      <div class="_sendmessage"></div>
+      <div class="_otherhalf">
+        <div class="_login">
+          <div class="container-fav">
+            <div class="title">
+              <div class="svg">
+                <img src="/img/loginuser.svg" alt="" />
+              </div>
+              <h2>Identificação</h2>
+            </div>
+            <form action="">
+              <label>
+                <span>Meu e-mail</span>
+                <input type="email" />
+              </label>
+              <label>
+                <span>Digite sua senha</span>
+                <input type="password" />
+              </label>
+              <button>Acessar <img src="/img/arrowlong.svg" alt="" /></button>
+            </form>
+            <div class="_forgot">
+              <span>Esqueceu a<strong> sua senha ?</strong></span>
+            </div>
+            <div class="_toregister">
+              <div class="img">
+                <img src="/img/card.svg" alt="" />
+              </div>
+              <span>Faça seu cadastro</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="_register">
+          <div class="container-fav">
+            <div class="title">
+              <div class="svg">
+                <img src="/img/loginuser.svg" alt="" />
+              </div>
+              <h2>Cadastre-se</h2>
+            </div>
+            <form action="">
+              <label>
+                <span>Nome</span>
+                <input type="name" />
+              </label>
+              <label>
+                <span>Digite seu e-mail</span>
+                <input type="email" />
+              </label>
+              <label>
+                <span>Telefone</span>
+                <input type="tel" />
+              </label>
+              <button>Cadastrar<img src="/img/arrowlong.svg" alt="" /></button>
+            </form>
+          </div>
+        </div>
+
+        <div class="_sendmessage">
+          <div class="container-fav">
+            <div class="title">
+              <h2>Envie-nos uma<br />mensagem</h2>
+            </div>
+            <form action="">
+              <label>
+                <span>Nome</span>
+                <input type="text" />
+              </label>
+              <label>
+                <span>Email</span>
+                <input type="email" />
+              </label>
+              <label>
+                <span>Telefone</span>
+                <input type="tel" />
+              </label>
+              <label>
+                <span>Cidade - UF</span>
+                <input type="text" />
+              </label>
+              <label>
+                <span>Digite sua mensagem</span>
+                <textarea
+                  class=".textA"
+                  name="message"
+                  id=""
+                  cols="30"
+                  rows="10"
+                ></textarea>
+              </label>
+
+              <button>Enviar <img src="/img/arrowlong.svg" alt="" /></button>
+            </form>
+          </div>
+        </div>
+      </div>
     </header>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/js/all.min.js "></script>

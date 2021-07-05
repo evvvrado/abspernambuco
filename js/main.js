@@ -138,3 +138,23 @@ $("header main button.hamburguer-menu").click(() => {
     500
   );
 });
+
+$(
+  "body._minha-conta header form label input,body._minha-conta header form label textarea"
+).focus(function () {
+  $(this).parent().find("span").addClass("active");
+});
+
+$(
+  "body._minha-conta header form label input,body._minha-conta header form label textarea"
+).focusout(function () {
+  if ($(this).val() == "") {
+    $(this).parent().find("span").removeClass("active");
+  }
+});
+
+$("body._minha-conta header ._otherhalf ._toregister").click(() => {
+  $("body._minha-conta header ._otherhalf").scrollTop(
+    $("body._minha-conta header ._otherhalf").height()
+  );
+});
