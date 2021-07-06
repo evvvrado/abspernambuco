@@ -1574,7 +1574,12 @@ body._minha-conta header ._half .container-fav ._contact {
 
 body._minha-conta header ._half .container-fav ._contact ._c span {
   margin-left: 0.3rem;
+  font-size: 1.4rem;
 }
+body._minha-conta header ._half .container-fav ._credit p {
+  font-size: 1.2rem;
+}
+
 body._minha-conta header ._half .container-fav ._credit .logo7seven {
   margin-left: 1rem;
 }
