@@ -158,3 +158,7 @@ $("body._minha-conta header ._otherhalf ._toregister").click(() => {
     $("body._minha-conta header ._otherhalf").height()
   );
 });
+
+$("header main button.btn-primary").click(() => {
+  window.location.href = "/contato.html";
+});

@@ -56,7 +56,6 @@ a {
 }
 .btn-alternative:hover {
   transform: scale(1.1);
-  background: var(--wine3);
 }
 section.s_welcome {
   display: flex;
@@ -200,14 +199,12 @@ body._home header main nav ul._hi li:first-child a {
   border-bottom: 3px solid var(--lightbrown);
 }
 
-body._cursos-e-eventos header main nav ul._hi li:nth-child(2) a {
-  color: var(--lightbrown);
-  border-bottom: 3px solid var(--lightbrown);
-}
+body._cursos-e-eventos header main nav ul._hi li:nth-child(2) a,
 body._curso-detalhes header main nav ul._hi li:nth-child(2) a {
   color: var(--lightbrown);
   border-bottom: 3px solid var(--lightbrown);
 }
+
 body._imprensa header main nav ul._hi li:last-child a {
   color: var(--lightbrown);
   border-bottom: 3px solid var(--lightbrown);
@@ -217,6 +214,7 @@ body._quem-somos header main nav ul._hi li:nth-child(3) a {
   color: var(--lightbrown);
   border-bottom: 3px solid var(--lightbrown);
 }
+body._blog header main nav ul._hi li:nth-child(5) a,
 body._blog-post header main nav ul._hi li:nth-child(5) a {
   color: var(--lightbrown);
   border-bottom: 3px solid var(--lightbrown);
@@ -260,6 +258,10 @@ body._cursos-e-eventos section.s_hero {
 body._imprensa section.s_hero {
   height: 32.7rem;
   background-image: url("/img/bannerimprensa.jpg");
+}
+body._contato section.s_hero {
+  height: 32.7rem;
+  background-image: url("/img/bannercontato.jpg");
 }
 body._quem-somos section.s_hero {
   height: 32.7rem;
@@ -1100,12 +1102,27 @@ body._imprensa section.s_acessoria {
   padding-top: 9.9rem;
   padding-bottom: 28.9rem;
 }
+body._imprensa._contato section.s_acessoria {
+  border-bottom: 1px solid var(--gray4);
+  padding-bottom: 25rem;
+}
+
 body._imprensa section.s_acessoria .container-fav {
   display: flex;
   justify-content: space-between;
 
   width: 100%;
   max-width: 77.4rem;
+}
+body._imprensa._contato section.s_acessoria .container-fav {
+  max-width: 100rem;
+  flex-direction: column;
+}
+body._imprensa._contato section.s_acessoria .container-fav ._content {
+  display: flex;
+  justify-content: space-between;
+
+  margin-bottom: 11.3rem;
 }
 body._imprensa section.s_acessoria .container-fav h4 {
   font-size: 2.2rem;
@@ -1160,13 +1177,65 @@ body._imprensa section.s_acessoria .container-fav ._left {
   width: 100%;
   max-width: 19.8rem;
 }
+body._imprensa._contato section.s_acessoria .container-fav ._left {
+  max-width: 38.4rem;
+}
+body._imprensa._contato section.s_acessoria .container-fav ._left form {
+  margin-top: 2.4rem;
+  display: flex;
+  flex-direction: column;
 
+  gap: 1.5rem;
+}
+body._imprensa._contato
+  section.s_acessoria
+  .container-fav
+  ._left
+  form
+  label
+  input,
+textarea {
+  width: 100%;
+  max-width: 38.4rem;
+  border-radius: 0.4rem;
+  border: 1px solid var(--gray11);
+  padding-left: 2.6rem;
+
+  font-family: "Inter", sans-serif;
+  font-size: 1.4rem;
+  line-height: 160%;
+
+  letter-spacing: 0.02em;
+
+  color: var(--gray9);
+}
+
+body._imprensa._contato
+  section.s_acessoria
+  .container-fav
+  ._left
+  form
+  label
+  textarea {
+  padding-top: 1.1rem;
+  height: 11.1rem;
+}
+body._imprensa._contato
+  section.s_acessoria
+  .container-fav
+  ._left
+  form
+  label
+  input {
+  height: 4.8rem;
+}
 body._imprensa section.s_acessoria .container-fav ._left button.btn-primary {
   display: flex;
   align-items: center;
   justify-content: center;
 
-  width: 19rem;
+  width: 100%;
+  max-width: 19rem;
   height: 5.7rem;
 
   background: var(--wine1);
@@ -1174,6 +1243,24 @@ body._imprensa section.s_acessoria .container-fav ._left button.btn-primary {
   margin-top: 2.4rem;
 }
 
+body._imprensa._contato
+  section.s_acessoria
+  .container-fav
+  ._left
+  form
+  button.btn-primary {
+  max-width: 23.7rem;
+}
+body._imprensa._contato
+  section.s_acessoria
+  .container-fav
+  ._left
+  form
+  button.btn-primary
+  .svg
+  img {
+  margin-left: 1.8rem;
+}
 body._quem-somos section.s_quem-somos {
   padding-top: 12.2rem;
   padding-bottom: 12rem;
@@ -1208,6 +1295,91 @@ body._quem-somos section.s_quem-somos .container-fav ._menu nav .nav-component {
   padding-bottom: 0.9rem;
 }
 
+body._blog .container-fav ._menu {
+  width: 100%;
+}
+body._blog .container-fav ._menu nav {
+  width: 100%;
+  max-width: 53.8rem;
+  margin: 0 auto;
+  display: flex;
+}
+body._blog .container-fav ._menu nav .nav-component {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  border-bottom: 2px solid var(--gray11);
+  padding-bottom: 0.9rem;
+}
+body._blog .container-fav ._menu nav .nav-component a {
+  font-family: "Share Tech", sans-serif;
+  font-size: 1.8rem;
+  line-height: 2rem;
+  text-transform: capitalize;
+
+  color: #686868;
+}
+body._blog section.s_blog {
+  background-color: white;
+  padding-top: calc(8.1rem - 5.3rem);
+}
+body._blog section.s_blog .blog-group {
+  margin-top: 5.3rem;
+}
+
+body._blog .container-fav ._menu nav .nav-component._active {
+  border-bottom: 2px solid var(--wine1);
+}
+
+body._blog section.s_blog-vertical {
+  width: 100%;
+  height: 55rem;
+  margin-bottom: 8.1rem;
+}
+body._blog section.s_blog-vertical .container-fav {
+  display: flex;
+}
+body._blog section.s_blog-vertical .vertical-blog .img {
+  position: absolute;
+  z-index: -1;
+}
+body._blog section.s_blog-vertical .vertical-blog {
+  position: relative;
+  width: 100%;
+  max-width: 40.3rem;
+  height: 100%;
+}
+
+body._blog section.s_blog-vertical .vertical-blog ._title {
+  font-family: "Share Tech", sans-serif;
+  font-size: 3rem;
+  line-height: 3.2rem;
+
+  margin-top: 35.2rem;
+  margin-left: 5.5rem;
+
+  width: 100%;
+  max-width: 22.9rem;
+
+  color: var(--white);
+}
+body._blog section.s_blog-vertical .vertical-blog button.btn-alternative {
+  width: 100%;
+  max-width: 23.8rem;
+  display: flex;
+  justify-content: space-between;
+
+  font-family: "Inter", sans-serif;
+  font-size: 1.6rem;
+  text-align: right;
+  text-transform: capitalize;
+
+  color: var(--white);
+
+  margin-top: 1.9rem;
+  margin-left: 5.5rem;
+}
+
 body._quem-somos
   section.s_quem-somos
   .container-fav
@@ -1230,6 +1402,63 @@ body._quem-somos
   nav
   .nav-component._active {
   border-bottom: 2px solid var(--wine1);
+}
+
+body._quem-somos section.s_quem-somos._diretoria .container-fav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+body._quem-somos section.s_quem-somos ._diretores {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5.8rem;
+
+  max-width: 99.2rem;
+  gap: 4.6rem;
+}
+
+body._quem-somos section.s_quem-somos ._diretores ._diretor {
+  display: flex;
+  width: 100%;
+  height: 26.5rem;
+
+  align-items: center;
+}
+
+body._quem-somos section.s_quem-somos ._diretores ._diretor main {
+  width: 100%;
+  max-width: 74.5rem;
+  height: 24.7rem;
+  padding-top: 1.8rem;
+  padding-left: 7.5rem;
+
+  margin-left: -3.2rem;
+
+  background-color: white;
+  box-shadow: 0px 9px 28px -1px rgba(232, 31, 96, 0.5);
+  border-radius: 9px;
+}
+
+body._quem-somos section.s_quem-somos ._diretores ._diretor main ._name {
+  font-family: "Share Tech";
+  font-size: 2.4rem;
+  line-height: 27px;
+
+  color: rgba(0, 31, 27, 0.74);
+}
+body._quem-somos section.s_quem-somos ._diretores ._diretor main ._cargo {
+  display: flex;
+  align-items: center;
+  margin-top: 2.2rem;
+
+  font-family: "Inter";
+  font-size: 1.2rem;
+
+  color: var(--wine1);
+
+  margin-bottom: 2.2rem;
 }
 
 body._curso-detalhes section.s_curso-conteudo {
@@ -1697,6 +1926,96 @@ body._minha-conta header ._login ._toregister {
   cursor: pointer;
   gap: 1.2rem;
 }
+
+body._curso-detalhes section.s_curso-conteudo.s_instrutores {
+  border-bottom: 1px solid var(--gray4);
+  padding-bottom: 25rem;
+}
+body._curso-detalhes
+  section.s_curso-conteudo.s_instrutores
+  .container-fav
+  ._text {
+  max-width: 100%;
+}
+body._curso-detalhes
+  section.s_curso-conteudo.s_instrutores
+  .container-fav
+  ._instrutores {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-top: 4.2rem;
+}
+body._curso-detalhes
+  section.s_curso-conteudo.s_instrutores
+  .container-fav
+  .instrutor
+  .img {
+  z-index: 2;
+}
+
+body._curso-detalhes
+  section.s_curso-conteudo.s_instrutores
+  .container-fav
+  .instrutor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body._curso-detalhes
+  section.s_curso-conteudo.s_instrutores
+  .container-fav
+  .instrutor
+  ._content {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  max-width: 27rem;
+  height: 14.1rem;
+
+  margin-top: -4.4rem;
+
+  padding-top: 2.2rem;
+
+  text-align: center;
+
+  background-color: var(--white);
+  box-shadow: 0px 9px 28px -1px rgba(232, 31, 96, 0.5);
+  border-radius: 9px;
+}
+body._curso-detalhes
+  section.s_curso-conteudo.s_instrutores
+  .container-fav
+  .instrutor
+  ._content
+  p {
+  font-size: 1.4rem;
+  line-height: 160%;
+  letter-spacing: 0.01em;
+
+  color: var(--gray8);
+}
+body._curso-detalhes
+  section.s_curso-conteudo.s_instrutores
+  .container-fav
+  .instrutor
+  ._content
+  h2 {
+  font-size: 3.6rem;
+  line-height: 140%;
+  /* or 50px */
+
+  color: var(--gray9);
+}
+body._curso-detalhes
+  section.s_curso-conteudo.s_instrutores
+  .container-fav
+  ._map {
+  margin-top: 3.4rem;
+}
+
 /* RESPONSIVO */
 
 @media (max-width: 1400px) {
@@ -1822,6 +2141,13 @@ body._minha-conta header ._login ._toregister {
     flex-direction: column;
     gap: 4rem;
     align-items: center;
+  }
+  body._imprensa._contato section.s_acessoria .container-fav ._content {
+    flex-direction: column;
+    gap: 3rem;
+  }
+  body._minha-conta header ._half {
+    display: none;
   }
 }
 
