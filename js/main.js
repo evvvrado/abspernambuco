@@ -1,3 +1,5 @@
+var gallerySelectedImage = 2;
+
 $('a[href*="#"]')
   // Remove links that don't actually link to anything
   .not('[href="#"]')
@@ -161,4 +163,33 @@ $("body._minha-conta header ._otherhalf ._toregister").click(() => {
 
 $("header main button.btn-primary").click(() => {
   window.location.href = "/contato.html";
+});
+
+$("body._galeria section.s_galeria main ._arrow:first-child").click(() => {
+  if (gallerySelectedImage - 1 <= 1) return 0;
+  gallerySelectedImage--;
+  $("body._galeria section.s_galeria main ._mainImage img").attr(
+    "src",
+    `/img/_gallery${gallerySelectedImage}.jpg`
+  );
+  $(`body._galeria section.s_galeria ._list ._img`).removeClass("_active");
+  $(
+    `body._galeria section.s_galeria ._list ._img:nth-child(${
+      gallerySelectedImage - 1
+    })`
+  ).addClass("_active");
+});
+$("body._galeria section.s_galeria main ._arrow:last-child").click(() => {
+  if (gallerySelectedImage + 1 >= 9) return 0;
+  gallerySelectedImage++;
+  $("body._galeria section.s_galeria main ._mainImage img").attr(
+    "src",
+    `/img/_gallery${gallerySelectedImage}.jpg`
+  );
+  $(`body._galeria section.s_galeria ._list ._img`).removeClass("_active");
+  $(
+    `body._galeria section.s_galeria ._list ._img:nth-child(${
+      gallerySelectedImage - 1
+    })`
+  ).addClass("_active");
 });
