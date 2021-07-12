@@ -141,24 +141,18 @@ $("header main button.hamburguer-menu").click(() => {
   );
 });
 
-$(
-  "body._minha-conta header form label input,body._minha-conta header form label textarea"
-).focus(function () {
+$("form label input,form label textarea").focus(function () {
   $(this).parent().find("span").addClass("active");
 });
 
-$(
-  "body._minha-conta header form label input,body._minha-conta header form label textarea"
-).focusout(function () {
+$("form label input,form label textarea").focusout(function () {
   if ($(this).val() == "") {
     $(this).parent().find("span").removeClass("active");
   }
 });
 
-$("body._minha-conta header ._otherhalf ._toregister").click(() => {
-  $("body._minha-conta header ._otherhalf").scrollTop(
-    $("body._minha-conta header ._otherhalf").height()
-  );
+$("._otherhalf ._toregister").click(() => {
+  $("._otherhalf").scrollTop($("._otherhalf").height());
 });
 
 $("header main button.btn-primary").click(() => {
@@ -192,4 +186,38 @@ $("body._galeria section.s_galeria main ._arrow:last-child").click(() => {
       gallerySelectedImage - 1
     })`
   ).addClass("_active");
+});
+
+$("section.s_produtos .container-fav ._productlist ._product .content").hover(
+  function () {
+    $(this).parent().find("._hover").css("transform", "translateY(0)");
+  }
+);
+
+$(
+  "section.s_descontos .container-fav ._descontoList ._descontoItem button.btn-primary "
+).click(() => {
+  window.location.href = "/experiencias-detalhes.html";
+});
+
+$(
+  "body._experienciaDetalhes section.s_sobreOferta .container-fav ._left ._readMore"
+).click(() => {
+  $(
+    "body._experienciaDetalhes section.s_sobreOferta .container-fav ._editableText"
+  ).animate(
+    {
+      maxHeight: "100%",
+    },
+    1000
+  );
+  $(
+    "body._experienciaDetalhes section.s_sobreOferta .container-fav ._left ._readMore"
+  ).addClass("_disable");
+});
+
+$(
+  "body._curso-detalhes section.s_hero ._curso-card .row button.btn-primary"
+).click(() => {
+  window.location.href = "/carrinho-identificacao.html";
 });

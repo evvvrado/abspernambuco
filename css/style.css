@@ -205,6 +205,14 @@ body._curso-detalhes header main nav ul._hi li:nth-child(2) a {
   border-bottom: 3px solid var(--lightbrown);
 }
 
+body._experiencia header main nav ul._hi li:nth-child(4) a {
+  color: var(--lightbrown);
+  border-bottom: 3px solid var(--lightbrown);
+}
+body._galeria header main nav ul._hi li:nth-child(6) a {
+  color: var(--lightbrown);
+  border-bottom: 3px solid var(--lightbrown);
+}
 body._imprensa header main nav ul._hi li:last-child a {
   color: var(--lightbrown);
   border-bottom: 3px solid var(--lightbrown);
@@ -254,6 +262,15 @@ section.s_hero .container-fav {
 body._cursos-e-eventos section.s_hero {
   height: 32.7rem;
   background-image: url("/img/bannercursos.jpg");
+}
+body._experiencia section.s_hero {
+  background-image: url("/img/bannerexperiencias.jpg");
+  align-items: flex-start;
+}
+body._experiencia._experienciaDetalhes section.s_hero .text {
+  margin: 0 !important;
+  display: flex;
+  justify-content: center;
 }
 body._imprensa section.s_hero {
   height: 32.7rem;
@@ -371,8 +388,12 @@ section.s_hero .container-fav .text {
   width: 100%;
   max-width: 57.3rem;
   height: 51.6rem;
-  border: solid 1px white;
+  background-image: url(/img/heroBackground.svg);
+  background-size: cover;
   padding: 1.6rem 2.4rem 2.6rem 3.2rem;
+}
+body._experiencia section.s_hero .container-fav .text {
+  background-image: none;
 }
 section.s_hero .container-fav .text .curso_online {
   display: flex;
@@ -443,6 +464,24 @@ section.s_hero .container-fav .hero_indicator {
   margin-top: 57.6rem;
 }
 
+body._experiencia section.s_hero .container-fav .text {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin-top: 8.8rem;
+}
+body._experiencia section.s_hero .container-fav .text .info {
+  margin-top: 0;
+}
+body._experiencia section.s_hero .container-fav p {
+  font-weight: 400;
+}
+body._experiencia section.s_hero .container-fav button.btn-primary {
+  width: 100%;
+  max-width: 17.9rem;
+  height: 4.5rem;
+}
 section.s_cursos {
   padding-top: 14.8rem;
   padding-bottom: 9.1rem;
@@ -1082,8 +1121,10 @@ section.s_blog .container-fav .blog-group .blog-item .blog-content .text span {
 }
 
 section.s_parceiros {
-  padding-top: 10rem;
+  padding-top: 5rem;
   padding-bottom: 4rem;
+
+  border-top: 1px solid var(--gray4);
 }
 
 section.s_parceiros .container-fav {
@@ -1103,7 +1144,6 @@ body._imprensa section.s_acessoria {
   padding-bottom: 28.9rem;
 }
 body._imprensa._contato section.s_acessoria {
-  border-bottom: 1px solid var(--gray4);
   padding-bottom: 25rem;
 }
 
@@ -2097,6 +2137,561 @@ body._galeria section.s_galeria ._list ._img._active::after {
   bottom: -1.7rem;
 }
 
+section.s_produtos {
+  background: var(--background-gradient2);
+  padding-top: 13.7rem;
+  height: 64rem;
+}
+section.s_produtos .container-fav ._title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3.2rem;
+}
+section.s_produtos .container-fav ._title label {
+  max-width: 38.3rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+section.s_produtos .container-fav ._title label input {
+  padding-top: 1.2rem;
+  padding-bottom: 1.2rem;
+  padding-left: 4.4rem;
+
+  font-family: "Gilroy";
+  font-size: 1.4rem;
+
+  border-radius: 0.9rem;
+  width: 100%;
+  height: 4.5rem;
+}
+section.s_produtos .container-fav ._title label .svg {
+  position: absolute;
+  margin-left: 1.2rem;
+}
+section.s_produtos .container-fav ._title h2 {
+  color: var(--white);
+}
+
+section.s_produtos .container-fav ._productlist {
+  display: flex;
+  justify-content: space-between;
+}
+section.s_produtos .container-fav ._productlist ._product {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+section.s_produtos .container-fav ._productlist ._product .content {
+  background-color: var(--white);
+  box-shadow: 0px 9px 28px -1px rgba(232, 31, 96, 0.5);
+  border-radius: 9px;
+
+  padding-top: 2.1rem;
+  display: flex;
+  flex-direction: column;
+
+  height: 23.4rem;
+  width: 100%;
+  max-width: 36.7rem;
+
+  position: relative;
+
+  align-items: flex-start;
+  padding-left: 7.4rem;
+  padding-right: 2.2rem;
+
+  margin-top: -4.7rem;
+
+  overflow: hidden;
+}
+
+section.s_produtos .container-fav ._productlist ._product .content span {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.8rem;
+  line-height: 150%;
+
+  max-width: 23.9rem;
+
+  color: var(--white);
+
+  text-align: center;
+}
+section.s_produtos .container-fav ._productlist ._product .content button {
+  height: 4.5rem;
+  width: 100%;
+  max-width: 19.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 3.2rem;
+  margin-bottom: 0.8rem;
+
+  background-color: white;
+}
+section.s_produtos .container-fav ._productlist ._product .content button span {
+  color: vaR(--wine1);
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.6rem;
+
+  margin-right: 0.832rem;
+}
+section.s_produtos
+  .container-fav
+  ._productlist
+  ._product
+  .content
+  span:last-child,
+section.s_produtos
+  .container-fav
+  ._productlist
+  ._product
+  .content
+  span:last-child
+  strong {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.3rem;
+  line-height: 160%;
+  /* identical to box height, or 21px */
+
+  text-align: center;
+}
+section.s_produtos
+  .container-fav
+  ._productlist
+  ._product
+  .content
+  span:last-child
+  strong {
+  cursor: pointer;
+  text-decoration: underline;
+}
+section.s_produtos .container-fav ._productlist ._product .content ._hover {
+  width: 100%;
+  height: 100%;
+
+  transform: translateY(-250px);
+
+  top: 0;
+  left: 0;
+  position: absolute;
+
+  transition: 1s;
+
+  padding-top: 2.1rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background-image: linear-gradient(180deg, #fc0555 0%, #90143c 100%);
+  box-shadow: 0px 9px 28px -1px rgba(232, 31, 96, 0.5);
+}
+section.s_produtos .container-fav ._productlist ._product .content .img {
+  width: 100%;
+  display: flex;
+
+  flex-direction: center;
+  justify-content: flex-end;
+}
+section.s_produtos .container-fav ._productlist ._product .content h2 {
+  font-size: 3.6rem;
+}
+section.s_produtos .container-fav ._productlist ._product .content p {
+  font-family: "Shares Tech", sans-serif;
+  text-decoration-line: line-through;
+  font-size: 2.4rem;
+  color: var(--gray15);
+  margin: 0;
+}
+section.s_produtos .container-fav ._productlist ._product .content .price {
+  background: var(--button--gradient3);
+
+  height: 4.5rem;
+  width: 100%;
+  max-width: 19.1rem;
+  margin-top: 0.8rem;
+}
+section.s_produtos .container-fav ._productlist ._product .content .price h2 {
+  color: var(--white);
+
+  font-size: 4rem;
+}
+
+section.s_descontos {
+  padding-top: 7rem;
+}
+
+section.s_descontos .container-fav h2 {
+  margin-bottom: 6.2rem;
+}
+section.s_descontos .container-fav ._title2 {
+  margin-top: 12rem;
+}
+section.s_descontos .container-fav ._descontoList {
+  display: flex;
+  justify-content: space-between;
+}
+section.s_descontos
+  .container-fav
+  ._descontoList:not(._descontoList:first-child) {
+  margin-top: 5.5rem;
+}
+section.s_descontos .container-fav ._descontoList ._descontoItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+section.s_descontos .container-fav ._descontoList ._descontoItem main {
+  background-color: var(--white);
+  width: 100%;
+  max-width: 36.7rem;
+  height: 23.4rem;
+  box-shadow: 0px 9px 28px -1px rgba(232, 31, 96, 0.2);
+  border-radius: 9px;
+  margin-top: -4.8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+}
+section.s_descontos
+  .container-fav
+  ._descontoList
+  ._descontoItem
+  main
+  .topcontent {
+  display: flex;
+  margin-top: -3.4rem;
+  width: 100%;
+  align-items: center;
+  justify-content: space-evenly;
+}
+section.s_descontos
+  .container-fav
+  ._descontoList
+  ._descontoItem
+  main
+  .topcontent
+  ._exclusive {
+  background-color: var(--wine9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.8rem;
+
+  width: 100%;
+  max-width: 14.3rem;
+  height: 3.1rem;
+
+  margin-left: 8.5rem;
+}
+section.s_descontos
+  .container-fav
+  ._descontoList
+  ._descontoItem
+  main
+  .topcontent
+  ._exclusive
+  span {
+  font-family: "Gilroy";
+  font-weight: 400;
+  font-size: 1.3rem;
+  line-height: 120%;
+  margin-left: 0.77rem;
+
+  color: #ffffff;
+}
+section.s_descontos
+  .container-fav
+  ._descontoList
+  ._descontoItem
+  main
+  .topcontent
+  ._exclusive
+  .svg {
+  margin-left: -0.77rem;
+}
+section.s_descontos
+  .container-fav
+  ._descontoList
+  ._descontoItem
+  main
+  .topcontent
+  ._marca
+  img {
+  margin-left: 2rem;
+  border-radius: 1.5rem;
+}
+section.s_descontos .container-fav ._descontoList ._descontoItem main .content {
+  max-width: 23.9rem;
+  min-height: 19.1rem;
+  text-align: center;
+  padding-top: 3.1rem;
+}
+section.s_descontos
+  .container-fav
+  ._descontoList
+  ._descontoItem
+  main
+  .content
+  span {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 150%;
+
+  text-align: center;
+
+  color: #323b4b;
+}
+body._experienciaDetalhes section.s_descontos {
+  padding-bottom: 15.5rem;
+  padding-top: 24rem;
+}
+section.s_descontos
+  .container-fav
+  ._descontoList
+  ._descontoItem
+  button.btn-primary {
+  height: 4.5rem;
+  width: 100%;
+  background: var(--button--gradient4);
+  margin-top: 1.4rem;
+}
+
+body._experiencia {
+  background: var(--gray16);
+}
+body._experiencia section.s_parceiros {
+  background: var(--white);
+}
+
+body._experienciaDetalhes section.s_sobreOferta {
+  position: relative;
+  padding-top: 12.1rem;
+}
+body._experienciaDetalhes section.s_sobreOferta .container-fav {
+  display: flex;
+  flex-direction: row;
+}
+body._experienciaDetalhes section.s_sobreOferta ._marca {
+  position: absolute;
+  width: 100%;
+  max-width: 17.8rem;
+  height: 16.3rem;
+  background-color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 1.5rem;
+
+  top: -8rem;
+}
+body._experienciaDetalhes section.s_sobreOferta .container-fav ._left {
+  width: 100%;
+  max-width: 43.4rem;
+}
+body._experienciaDetalhes section.s_sobreOferta .container-fav ._left h2 {
+  margin-bottom: 8.2rem;
+}
+
+body._experienciaDetalhes
+  section.s_sobreOferta
+  .container-fav
+  ._left
+  ._editableText {
+  margin-top: 4.3rem;
+  max-height: 19.5rem;
+  overflow: hidden;
+
+  transition: 1s;
+}
+
+body._experienciaDetalhes
+  section.s_sobreOferta
+  .container-fav
+  ._left
+  ._readMore {
+  position: relative;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+
+  cursor: pointer;
+
+  color: var(--wine10);
+
+  box-shadow: 0 -2rem 7rem 8rem var(--gray16);
+
+  transition: 1s;
+}
+body._experienciaDetalhes
+  section.s_sobreOferta
+  .container-fav
+  ._left
+  ._readMore._disable {
+  box-shadow: none;
+}
+body._experienciaDetalhes section.s_sobreOferta .container-fav ._right {
+  margin-left: 7.5rem;
+  margin-right: 10rem;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body._experienciaDetalhes
+  section.s_sobreOferta
+  .container-fav
+  ._right
+  ._validade {
+  width: 100%;
+
+  border: 1px solid #d1d0d0;
+  border-radius: 1.5rem;
+
+  margin-bottom: 3.7rem;
+
+  padding-top: 2.7rem;
+  padding-left: 7.5rem;
+  padding-bottom: 3.1rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+
+  color: var(--gray17);
+}
+body._experienciaDetalhes
+  section.s_sobreOferta
+  .container-fav
+  ._right
+  ._validade
+  ._title {
+  display: flex;
+  gap: 1.1rem;
+
+  align-items: center;
+}
+body._experienciaDetalhes
+  section.s_sobreOferta
+  .container-fav
+  ._right
+  ._validade
+  span:last-child {
+  font-family: "Inter";
+  line-height: 150%;
+  margin-left: 3.6rem;
+}
+
+body._experienciaDetalhes
+  section.s_sobreOferta
+  .container-fav
+  ._right
+  ._validade
+  ._title
+  h2 {
+  font-size: 2.4rem;
+}
+
+body._experienciaDetalhes
+  section.s_sobreOferta
+  .container-fav
+  ._right
+  ._buttonCamp {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding-top: 2.7rem;
+  padding-bottom: 2.2rem;
+  border-radius: 15px;
+
+  background: var(--white);
+}
+body._experienciaDetalhes
+  section.s_sobreOferta
+  .container-fav
+  ._right
+  ._buttonCamp
+  button.btn-primary {
+  background: var(--button--gradient2);
+  padding: 1rem 9.9rem 1rem 9.9rem;
+}
+body._experienciaDetalhes
+  section.s_sobreOferta
+  .container-fav
+  ._right
+  ._buttonCamp
+  p {
+  font-size: 1.4rem;
+  line-height: 150%;
+  margin-top: 0.8rem;
+  color: var(--gray1);
+}
+body._experienciaDetalhes section.s_sobreOferta .container-fav ._right ._share {
+  display: flex;
+  gap: 1.8rem;
+
+  margin-top: 3rem;
+}
+body._experienciaDetalhes
+  section.s_sobreOferta
+  .container-fav
+  ._right
+  ._share
+  ._btns {
+  display: flex;
+  align-items: center;
+}
+body._experienciaDetalhes
+  section.s_sobreOferta
+  .container-fav
+  ._right
+  ._share
+  ._btns
+  ._logo {
+  padding-right: 1.8rem;
+  padding-left: 1.8rem;
+}
+body._experienciaDetalhes
+  section.s_sobreOferta
+  .container-fav
+  ._right
+  ._share
+  ._btns
+  ._logo:first-child {
+  border-right: 1px dashed #000000;
+}
+
 /* RESPONSIVO */
 
 @media (max-width: 1400px) {
@@ -2251,6 +2846,13 @@ body._galeria section.s_galeria ._list ._img._active::after {
   }
   body._curso-detalhes section.s_hero ._curso-card {
     display: none;
+  }
+  body._blog section.s_blog-vertical {
+    display: none;
+  }
+  body._blog section.s_blogmenu h2 {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
   }
 }
 
