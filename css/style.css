@@ -274,10 +274,6 @@ body._experiencia._experienciaDetalhes section.s_hero .text {
 }
 body._imprensa section.s_hero {
   height: 32.7rem;
-  background-image: url("/img/bannerimprensa.jpg");
-}
-body._contato section.s_hero {
-  height: 32.7rem;
   background-image: url("/img/bannercontato.jpg");
 }
 body._quem-somos section.s_hero {
@@ -534,6 +530,35 @@ body._cursos-e-eventos section.s_cursos .container-fav .title:nth-child(2) {
 body._cursos-e-eventos section.s_cursos .container-fav .title:first-child {
   justify-content: center;
 }
+body._imprensa .filterMenu .container-fav {
+  padding-top: 5rem;
+  max-width: 50rem;
+}
+body._imprensa .container-fav .title nav._filter h2:first-child {
+  padding-right: 9rem;
+  padding-left: 6.1rem;
+}
+body._imprensa .container-fav .title nav._filter h2 {
+  font-size: 4rem;
+  text-align: center;
+
+  border-bottom: 3px solid #c4c4c4;
+  cursor: pointer;
+  padding-left: 7.2rem;
+  padding-bottom: 0.5rem;
+  padding-right: 6.6rem;
+}
+
+body._imprensa .container-fav .title nav._filter h2._active {
+  border-bottom: 3px solid var(--lightbrown);
+}
+body._imprensa .container-fav .title nav._filter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* max-width: 47.1rem; */
+}
+
 body._cursos-e-eventos
   section.s_cursos
   .container-fav
@@ -568,7 +593,6 @@ body._cursos-e-eventos section.s_cursos .container-fav .title nav._filter {
   align-items: center;
   /* max-width: 47.1rem; */
 }
-
 section.s_cursos .container-fav .curso-group {
   display: flex;
   justify-content: space-between;
@@ -1143,8 +1167,9 @@ body._imprensa section.s_acessoria {
   padding-top: 9.9rem;
   padding-bottom: 28.9rem;
 }
-body._imprensa._contato section.s_acessoria {
+body._imprensa section.s_acessoria.s_contato {
   padding-bottom: 25rem;
+  display: none;
 }
 
 body._imprensa section.s_acessoria .container-fav {
@@ -1154,11 +1179,11 @@ body._imprensa section.s_acessoria .container-fav {
   width: 100%;
   max-width: 77.4rem;
 }
-body._imprensa._contato section.s_acessoria .container-fav {
+body._imprensa section.s_acessoria.s_contato .container-fav {
   max-width: 100rem;
   flex-direction: column;
 }
-body._imprensa._contato section.s_acessoria .container-fav ._content {
+body._imprensa section.s_acessoria.s_contato .container-fav ._content {
   display: flex;
   justify-content: space-between;
 
@@ -1217,18 +1242,18 @@ body._imprensa section.s_acessoria .container-fav ._left {
   width: 100%;
   max-width: 19.8rem;
 }
-body._imprensa._contato section.s_acessoria .container-fav ._left {
+body._imprensa section.s_acessoria.s_contato .container-fav ._left {
   max-width: 38.4rem;
 }
-body._imprensa._contato section.s_acessoria .container-fav ._left form {
+body._imprensa section.s_acessoria.s_contato .container-fav ._left form {
   margin-top: 2.4rem;
   display: flex;
   flex-direction: column;
 
   gap: 1.5rem;
 }
-body._imprensa._contato
-  section.s_acessoria
+body._imprensa
+  section.s_acessoria.s_contato
   .container-fav
   ._left
   form
@@ -1250,8 +1275,8 @@ textarea {
   color: var(--gray9);
 }
 
-body._imprensa._contato
-  section.s_acessoria
+body._imprensa
+  section.s_acessoria.s_contato
   .container-fav
   ._left
   form
@@ -1260,8 +1285,8 @@ body._imprensa._contato
   padding-top: 1.1rem;
   height: 11.1rem;
 }
-body._imprensa._contato
-  section.s_acessoria
+body._imprensa
+  section.s_acessoria.s_contato
   .container-fav
   ._left
   form
@@ -1283,15 +1308,15 @@ body._imprensa section.s_acessoria .container-fav ._left button.btn-primary {
   margin-top: 2.4rem;
 }
 
-body._imprensa._contato
-  section.s_acessoria
+body._imprensa
+  section.s_acessoria.s_contato
   .container-fav
   ._left
   form
   button.btn-primary {
   max-width: 23.7rem;
 }
-body._imprensa._contato
+body._imprensa
   section.s_acessoria
   .container-fav
   ._left
@@ -1786,7 +1811,13 @@ body._minha-conta header ._register,
 body._minha-conta header ._sendmessage {
   padding-left: 10rem;
   height: 100vh;
-  padding-top: 19.6rem;
+  padding-top: 10rem;
+}
+body._minha-conta header ._seja-um-associado {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 0;
 }
 body._minha-conta header ._otherhalf {
   height: 100vh;
@@ -1800,7 +1831,7 @@ body._minha-conta header ._half {
   height: 100vh;
   width: 100%;
   max-width: 55%;
-  padding-top: 8rem;
+  padding-top: 3rem;
   color: var(--white);
   font-family: "Spartan", sans-serif;
 }
@@ -1943,23 +1974,27 @@ body._minha-conta header form button {
   text-transform: capitalize;
 }
 
-body._minha-conta header ._login ._forgot {
+body._minha-conta header ._forgot,
+body._minha-conta header ._tologin {
   font-family: "Spartan", sans-serif;
   margin-bottom: 11.5rem;
+  cursor: pointer;
 }
-body._minha-conta header ._login ._forgot span {
+body._minha-conta header ._forgot span,
+body._minha-conta header ._tologin span {
   font-size: 1.2rem;
 }
-body._minha-conta header ._login ._forgot span strong {
+body._minha-conta header ._forgot span strong,
+body._minha-conta header ._tologin span strong {
   font-size: 1.2rem;
 }
 
-body._minha-conta header ._login ._toregister span {
+body._minha-conta header ._toregister span {
   font-family: "Spartan", sans-serif;
   font-weight: bold;
   font-size: 1.2rem !important;
 }
-body._minha-conta header ._login ._toregister {
+body._minha-conta header ._toregister {
   display: flex;
   align-items: center;
 
@@ -2692,6 +2727,33 @@ body._experienciaDetalhes
   border-right: 1px dashed #000000;
 }
 
+body._minha-conta ._otherhalf .card-area {
+  width: 80rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body._minha-conta ._otherhalf ._card {
+  height: 40rem;
+  width: 60rem;
+  background-image: url("/img/associado_card.png");
+  background-size: cover;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 4.5rem;
+}
+body._minha-conta ._otherhalf ._card .row span {
+  color: white;
+  font-family: "Share Tech";
+  font-size: 2.4rem;
+}
+._infobox:not(body._minha-conta ._infobox) {
+  transform: translateY(80px);
+  transition: 0.32s;
+}
 /* RESPONSIVO */
 
 @media (max-width: 1400px) {
@@ -2824,7 +2886,7 @@ body._experienciaDetalhes
     gap: 4rem;
     align-items: center;
   }
-  body._imprensa._contato section.s_acessoria .container-fav ._content {
+  body._imprensa section.s_acessoria.s_contato .container-fav ._content {
     flex-direction: column;
     gap: 3rem;
   }
@@ -2853,6 +2915,27 @@ body._experienciaDetalhes
   body._blog section.s_blogmenu h2 {
     padding-top: 5rem;
     padding-bottom: 5rem;
+  }
+  section.s_descontos .container-fav ._descontoList {
+    flex-direction: column;
+    gap: 15rem;
+  }
+  section.s_descontos .container-fav ._descontoList ._descontoItem main {
+    max-width: 100%;
+    height: auto;
+    padding-bottom: 2rem;
+  }
+  section.s_produtos {
+    height: auto;
+    padding-bottom: 4rem;
+  }
+  section.s_produtos .container-fav ._productlist {
+    overflow-x: scroll;
+    gap: 4.5rem;
+  }
+  section.s_produtos .container-fav ._productlist ._product .content {
+    width: 30rem;
+    padding-left: 5.4rem;
   }
 }
 
@@ -2905,6 +2988,10 @@ body._experienciaDetalhes
     max-width: 100%;
     gap: 25px;
     height: auto;
+  }
+  section.s_produtos .container-fav ._title {
+    flex-direction: column;
+    gap: 3rem;
   }
 }
 

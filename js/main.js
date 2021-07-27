@@ -130,6 +130,38 @@ $("section.s_cursos .container-fav .title ._filter h2._eventosbutton").click(
   }
 );
 
+// IMPRENSA E CONTATO
+
+$("body._imprensa  .container-fav .title ._filter h2._cursosbutton").click(
+  () => {
+    $("body._imprensa  .container-fav .title ._filter h2").removeClass(
+      "_active"
+    );
+
+    $(
+      "body._imprensa  .container-fav .title ._filter h2._cursosbutton"
+    ).addClass("_active");
+
+    $("body._imprensa   .s_acessoria").css("display", "block");
+    $("body._imprensa   .s_acessoria.s_contato").css("display", "none");
+  }
+);
+
+$(" body._imprensa .container-fav .title ._filter h2._eventosbutton").click(
+  () => {
+    $("body._imprensa  .container-fav .title ._filter h2").removeClass(
+      "_active"
+    );
+
+    $(
+      "body._imprensa  .container-fav .title ._filter h2._eventosbutton"
+    ).addClass("_active");
+
+    $("body._imprensa   .s_acessoria.s_contato").css("display", "block");
+    $("body._imprensa   .s_acessoria:not(.s_contato)").css("display", "none");
+  }
+);
+
 // SIDE MENU ANIMATION
 
 $("header main button.hamburguer-menu").click(() => {
@@ -155,8 +187,18 @@ $("._otherhalf ._toregister").click(() => {
   $("._otherhalf").scrollTop($("._otherhalf").height());
 });
 
+$("._otherhalf ._forgot").click(() => {
+  $("._otherhalf").scrollTop($("._otherhalf").height() * 2);
+});
+$("._otherhalf ._tologin").click(() => {
+  $("._otherhalf").scrollTop(0);
+});
+
 $("header main button.btn-primary").click(() => {
-  window.location.href = "/contato.html";
+  window.location.href = "/seja-um-associado-login.html";
+});
+$("footer .novidades button").click(() => {
+  window.location.href = "/newsletter.html";
 });
 
 $("body._galeria section.s_galeria main ._arrow:first-child").click(() => {
@@ -220,4 +262,70 @@ $(
   "body._curso-detalhes section.s_hero ._curso-card .row button.btn-primary"
 ).click(() => {
   window.location.href = "/carrinho-identificacao.html";
+});
+
+const backdrop = {
+  visivel: true,
+  init: function () {
+    setTimeout(function () {
+      if (backdrop.visivel) {
+        backdrop.esconde();
+      }
+    }, 10 * 1000);
+  },
+  esconde: function () {
+    $("#backdrop").css("background", "");
+    $("#backdrop>div").fadeOut();
+    $("#backdrop").delay(350).fadeOut("slow");
+    $("body").delay(350).css("overflow", "");
+    backdrop.visivel = false;
+  },
+};
+
+backdrop.esconde();
+
+function varialpopshovit(type) {
+  switch (type) {
+    case "done":
+      $("#_info").html(
+        ' <div class="_img"><img src="/img/sistema/approved2.svg" alt="Simbolo" class="concluido"></div> Concluído'
+      );
+      $("._box").css("background-color", "background: rgba(0, 100, 0, 0.7);");
+      break;
+    case "error":
+      $("#_info").html(
+        ' <div class="_img"><img src="/img/sistema/canceled.svg" alt="Simbolo" class="concluido"></div> Erro'
+      );
+      $("._box").css("background-color", "background: rgba(100, 0, 0, 0.7);");
+      break;
+
+    default:
+      $("#_info").html(
+        ' <div class="_img"><img src="/img/sistema/canceled.svg" alt="Simbolo" class="concluido"></div> Undefined'
+      );
+      break;
+  }
+  $("._infobox").css("transform", "none");
+
+  $("._loadingBox").animate(
+    {
+      width: 0,
+    },
+    5000,
+    () => {
+      $("._infobox").css("transform", "translateY(-80px)");
+      $("._loadingBox").width("100%");
+    }
+  );
+}
+$("form button").click(() => {
+  varialpopshovit("done");
+  $("form input").val("");
+  $("form textarea").val("");
+});
+
+$("body._minha-conta form button").click(() => {
+  varialpopshovit("error");
+  $("form input").val("");
+  $("form textarea").val("");
 });

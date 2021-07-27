@@ -46,10 +46,14 @@
       <nav class="_sidecontent">
         <a href=""><img src="/img/hamburguer.svg" alt="" /></a>
         <a href="/index.html"><img src="/img/home.svg" alt="" /></a>
-        <a href="/cursos-e-eventos.html"><img src="/img/home.svg" alt="" /></a>
-        <a href="/quem-somos.html"><img src="/img/user.svg" alt="" /></a>
-        <!-- <a href="/experiencias.html"><img src="/img/imprensaEnvelop.svg" alt="/curso.html"></a>
-          <a href="/galeria.html"><img src="/img/imprensaEnvelop.svg" alt=""></a> -->
+        <a href="/cursos-e-eventos.html"
+          ><img src="/img/cupWhite.svg" alt=""
+        /></a>
+        <a href="/quem-somos.html"><img src="/img/userWhite.svg" alt="" /></a>
+        <a href="/experiencias.html"
+          ><img src="/img/imprensaEnvelopWhite.svg" alt="/curso.html"
+        /></a>
+        <!-- <a href="/galeria.html"><img src="/img/imprensaEnvelop.svg" alt=""></a> -->
         <a href="/imprensa.html"><img src="/img/Headset.svg" alt="" /></a>
       </nav>
     </div>
@@ -234,74 +238,86 @@
               </div>
               <h2>Identificação</h2>
             </div>
-            <div class="arrow _title">
+            <div class="arrow _title _active">
               <img src="/img/sistema/loadingArrow.svg" alt="" />
             </div>
 
-            <div class="_title">
+            <div class="_title _active">
               <div class="_img">
                 <img src="/img/sistema/card.svg" alt="" />
               </div>
               <h2>Pagamento</h2>
             </div>
           </div>
-          <div class="content">
-            <h2>Já sou Cadastrado</h2>
-            <div class="_offtitle">
-              <div class="_left">
-                <form onsubmit="return false">
-                  <label>
-                    <span>Meu e-mail</span>
-                    <input type="email" />
-                  </label>
-                  <label>
-                    <span>Digite sua senha</span>
-                    <input type="password" />
-                  </label>
-                  <button
-                    onclick="window.location.href = '/carrinho-efetuar.html'"
-                  >
-                    Acessar <img src="/img/arrowlong.svg" alt="" />
-                  </button>
-                </form>
-
-                <a href="/" class="_forgotPass">
-                  <div class="_svg">
-                    <img src="/img/sistema/lockData.svg" alt="" />
+          <div class="_pagamento">
+            <div class="_topInfo">
+              <div class="row">
+                <div class="_name">
+                  <div class="_img">
+                    <img src="/img/sistema/user.svg" alt="" />
                   </div>
-                  Esqueci minha senha
-                </a>
-
-                <div class="_others">
-                  <h2>Login com um clique</h2>
-                  <div class="_buttons">
-                    <div class="_button">
-                      <div class="_img">
-                        <img src="img/sistema/google.svg" alt="" />
-                      </div>
-                      Google
-                    </div>
-                    <div class="_button">
-                      <div class="_img">
-                        <img src="img/sistema/facebook.svg" alt="" />
-                      </div>
-                      Facebook
-                    </div>
-                  </div>
+                  <p>Everaldo Júnior</p>
+                </div>
+                <p>everaldocrj@gmail.com</p>
+              </div>
+              <div class="row">
+                <div>
+                  <p>
+                    Rua Rio Grande do Sul - Centro Poços de Caldas - MG Numero
+                    42 Apartamento - 301
+                  </p>
+                </div>
+                <div>
+                  <span>JAD Log - R$ 19,90</span>
                 </div>
               </div>
-
-              <div
-                class="_right"
-                onclick="window.location.href = '/conta.html'"
-              >
-                <div class="_icon">
-                  <img src="/img/sistema/register.svg" alt="" />
+            </div>
+            <div class="_cupom">
+              <div class="_text">
+                <span>Cupom de desconto</span>
+                <p>Digite o código de desconto ao lado:</p>
+              </div>
+              <div class="_input">
+                <div class="_form">
+                  <div class="_svg">
+                    <img src="/img/sistema/cupom.svg" alt="" />
+                  </div>
+                  <input type="text" placeholder="#AbsÉ10" />
+                  <button>
+                    <img src="/img/sistema/arrowright.svg" alt="" />
+                  </button>
                 </div>
-                <span
-                  >É a sua primeira vez?
-                  <strong>Cadastre-se Agora!</strong>
-                </span>
+                <p>- R$ 20 aplicado na sua compra</p>
+              </div>
+            </div>
+            <div class="_choose">
+              <div class="_title">
+                <span>Escolha a forma de pagamento</span>
+                <p>Selecione qual opçao deseja realizar o pagamento</p>
+              </div>
+              <div class="_buttons">
+                <div class="bolet button">
+                  <div class="_icon">
+                    <img src="/img/sistema/boleto.svg" alt="" />
+                  </div>
+                  <div class="_text">
+                    <span>Boleto Bancário</span>
+                    <p>10% de desconto</p>
+                  </div>
+                </div>
+
+                <div
+                  class="creditCard button"
+                  onclick="window.location.href = '/carrinho-pagamento.html'"
+                >
+                  <div class="_icon">
+                    <img src="/img/sistema/creditcard.svg" alt="" />
+                  </div>
+                  <div class="_text">
+                    <span>Cartão de Crédito</span>
+                    <p>em até 10x sem juros</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

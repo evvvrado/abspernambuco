@@ -342,8 +342,18 @@ section._copyRight {
 }
 section._copyRight p {
   font-size: 1.2rem;
+  width: 100%;
   line-height: 1.9rem;
-  color: var(--gray11);
+  color: var(--gray12);
+}
+section._copyRight p strong {
+  font-size: 1.5rem;
+  display: flex;
+  font-weight: 400;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
 }
 
 section._meusPedidos {
@@ -588,7 +598,6 @@ section._meusDados .container-fav {
 }
 section._meusDados .container-fav ._right {
   width: 100%;
-  max-width: 40rem;
 }
 section._meusDados .container-fav ._right ._top {
   margin-bottom: 3.2rem;
@@ -598,8 +607,13 @@ section._meusDados .container-fav ._right ._top:nth-child(3) {
 }
 section._meusDados .container-fav ._right ._dados {
   display: flex;
+  gap: 1.2rem;
+}
+section._meusDados .container-fav ._dados .dados-div {
+  display: flex;
   flex-direction: column;
   gap: 1.2rem;
+  width: 100%;
 }
 
 section._meusDados .container-fav ._dados ._dadosComponent {
@@ -622,7 +636,7 @@ section._meusDados .container-fav ._dados ._dadosComponent ._icon {
 }
 
 section._meusDados .container-fav ._left {
-  width: 100%;
+  width: 50%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -1052,6 +1066,7 @@ section.s_identificacao .container-fav ._half .content ._offtitle ._right {
   cursor: pointer;
   max-width: 31.3rem;
   width: 100%;
+  height: 21rem;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -1223,6 +1238,311 @@ section.s_compraRealizada
   button.btn-primary._secundary {
   background: var(--gray11);
   color: var(--orange2);
+}
+body._carrinho section.s_identificacao .container-fav ._half ._top {
+  border-bottom: solid 2px var(--lightbrown);
+}
+body._carrinho
+  section.s_identificacao
+  .container-fav
+  ._half
+  ._top
+  ._title._active {
+  border: none;
+}
+body._carrinho section.s_identificacao .container-fav ._pagamento {
+  width: 100%;
+}
+body._carrinho section.s_identificacao .container-fav ._pagamento ._topInfo {
+  padding-top: 3.4rem;
+  padding-bottom: 3.2rem;
+  border-bottom: 1px solid var(--gray11);
+}
+body._carrinho
+  section.s_identificacao
+  .container-fav
+  ._pagamento
+  ._topInfo
+  div {
+  display: flex;
+}
+body._carrinho
+  section.s_identificacao
+  .container-fav
+  ._pagamento
+  ._topInfo
+  .row {
+  width: 100%;
+  max-width: 36.2rem;
+  justify-content: space-between;
+}
+body._carrinho
+  section.s_identificacao
+  .container-fav
+  ._pagamento
+  ._topInfo
+  .row
+  ._name {
+  gap: 1.5rem;
+  margin-bottom: 2.4rem;
+}
+body._carrinho
+  section.s_identificacao
+  .container-fav
+  ._pagamento
+  ._topInfo
+  .row:nth-child(2) {
+  width: 100%;
+  max-width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+body._carrinho
+  section.s_identificacao
+  .container-fav
+  ._pagamento
+  ._topInfo
+  .row:nth-child(2)
+  p {
+  width: 100%;
+  max-width: 37.6rem;
+}
+body._carrinho
+  section.s_identificacao
+  .container-fav
+  ._pagamento
+  ._topInfo
+  .row:nth-child(2)
+  span {
+  font-size: 1.6rem;
+
+  color: var(--orange2);
+}
+body._carrinho
+  section.s_identificacao
+  .container-fav
+  ._pagamento
+  ._topInfo
+  .row
+  p {
+  font-size: 1.4rem;
+  color: #d9a863;
+}
+body._carrinho section.s_identificacao .container-fav ._pagamento ._cupom {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 3.2rem 0;
+  border-bottom: 1px solid var(--gray11);
+}
+body._carrinho
+  section.s_identificacao
+  .container-fav
+  ._pagamento
+  ._cupom
+  ._input {
+  width: 100%;
+  max-width: 38.4rem;
+  height: 100%;
+
+  position: relative;
+}
+body._carrinho
+  section.s_identificacao
+  .container-fav
+  ._pagamento
+  ._cupom
+  ._input
+  ._form {
+  display: flex;
+  gap: 0.5rem;
+}
+body._carrinho
+  section.s_identificacao
+  .container-fav
+  ._pagamento
+  ._cupom
+  ._input
+  button {
+  padding: 2.3rem 2.7rem;
+  border-radius: 0.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--wine11);
+  max-width: 6.3rem;
+}
+body._carrinho
+  section.s_identificacao
+  .container-fav
+  ._pagamento
+  ._cupom
+  ._input
+  input {
+  border: 1px solid var(--gray11);
+  max-width: 31.4rem;
+  padding: 1.7rem 4.2rem;
+  border-radius: 0.4rem;
+
+  font-size: 1.6rem;
+
+  color: var(--wine12);
+}
+body._carrinho
+  section.s_identificacao
+  .container-fav
+  ._pagamento
+  ._cupom
+  ._input
+  ._svg {
+  position: absolute;
+  top: 2.1rem;
+  left: 1.9rem;
+}
+body._carrinho section.s_identificacao .container-fav ._pagamento span {
+  font-size: 1.8rem;
+}
+body._carrinho section.s_identificacao .container-fav ._pagamento p {
+  font-size: 1.4rem;
+
+  color: var(--orange2);
+  opacity: 0.7;
+
+  margin-top: 0.9rem;
+}
+body._carrinho section.s_identificacao .container-fav ._pagamento ._choose {
+  padding-top: 3.2rem;
+}
+body._carrinho section.s_identificacao .container-fav ._pagamento ._buttons {
+  width: 100%;
+  display: flex;
+  gap: 3.1rem;
+  justify-content: space-between;
+  margin-top: 2.5rem;
+}
+body._carrinho
+  section.s_identificacao
+  .container-fav
+  ._pagamento
+  ._buttons
+  .button {
+  width: 100%;
+  height: 12.9rem;
+  display: flex;
+  background-color: var(--wine12);
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.4rem;
+  gap: 1.6rem;
+  color: var(--white);
+
+  cursor: pointer;
+}
+body._carrinho
+  section.s_identificacao
+  .container-fav
+  ._pagamento
+  ._buttons
+  .button
+  p {
+  margin: 0;
+}
+body._carrinho
+  section.s_identificacao
+  .container-fav
+  ._pagamento
+  ._buttons
+  .button:first-child {
+  background-color: var(--gray11);
+  color: var(--wine12);
+}
+
+body._carrinho
+  section.s_identificacao
+  .container-fav
+  ._pagamento
+  ._pagamentoCartao {
+  max-width: 41.6rem;
+  padding-top: 3.2rem;
+}
+body._carrinho
+  section.s_identificacao
+  .container-fav
+  ._pagamento
+  ._pagamentoCartao
+  ._form {
+  padding-top: 2.4rem;
+}
+body._carrinho
+  section.s_identificacao
+  .container-fav
+  ._pagamento
+  ._pagamentoCartao
+  ._form
+  form
+  label
+  span {
+  font-family: 1.6rem;
+  font-weight: 400;
+}
+body._carrinho
+  section.s_identificacao
+  .container-fav
+  ._pagamento
+  ._pagamentoCartao
+  ._form
+  form
+  label
+  input {
+  font-size: 1.6rem;
+  font-weight: 400;
+  border-radius: 0.4rem;
+}
+body._carrinho
+  section.s_identificacao
+  .container-fav
+  ._pagamento
+  ._pagamentoCartao
+  ._form
+  form
+  label:nth-last-child(3),
+body._carrinho
+  section.s_identificacao
+  .container-fav
+  ._pagamento
+  ._pagamentoCartao
+  ._form
+  form
+  label:nth-last-child(2) {
+  width: 100%;
+  max-width: 18.4rem;
+}
+body._carrinho
+  section.s_identificacao
+  .container-fav
+  ._pagamento
+  ._pagamentoCartao
+  ._form
+  form
+  label:nth-last-child(4) {
+  width: 27.2rem;
+}
+body._carrinho
+  section.s_identificacao
+  .container-fav
+  ._pagamento
+  ._pagamentoCartao
+  ._form
+  form
+  button {
+  width: 100%;
+  max-width: 31.5rem;
+  height: 6.3rem;
+  font-size: 1.8rem;
+  font-weight: 400;
+  border-radius: 0.4rem;
+
+  background: var(--orange2);
 }
 @media (max-width: 1400px) {
   header main nav {
