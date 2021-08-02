@@ -534,19 +534,13 @@ body._imprensa .filterMenu .container-fav {
   padding-top: 5rem;
   max-width: 50rem;
 }
-body._imprensa .container-fav .title nav._filter h2:first-child {
-  padding-right: 9rem;
-  padding-left: 6.1rem;
-}
 body._imprensa .container-fav .title nav._filter h2 {
   font-size: 4rem;
   text-align: center;
+  width: 100%;
 
   border-bottom: 3px solid #c4c4c4;
   cursor: pointer;
-  padding-left: 7.2rem;
-  padding-bottom: 0.5rem;
-  padding-right: 6.6rem;
 }
 
 body._imprensa .container-fav .title nav._filter h2._active {
@@ -2163,6 +2157,10 @@ body._galeria section.s_galeria main ._mainImage img {
 body._galeria section.s_galeria ._list ._img._active {
   opacity: 1;
 }
+
+body._galerias._galeria section.s_galeria ._img {
+  opacity: 1;
+}
 body._galeria section.s_galeria ._list ._img._active::after {
   content: "";
   position: absolute;
@@ -2890,8 +2888,27 @@ body._minha-conta ._otherhalf ._card .row span {
     flex-direction: column;
     gap: 3rem;
   }
+  body._minha-conta {
+    overflow-y: hidden;
+  }
+  body._minha-conta header {
+    flex-direction: column;
+  }
+  body._minha-conta header ._half .container-fav .logos {
+    gap: 0;
+  }
+  body._minha-conta ._otherhalf .card-area {
+    width: 100vw;
+    height: 44vh;
+  }
   body._minha-conta header ._half {
-    display: none;
+    height: 33rem;
+    max-width: 100%;
+  }
+  body._minha-conta header ._login,
+  body._minha-conta header ._register,
+  body._minha-conta header ._sendmessage {
+    padding-left: 0;
   }
   body._galeria section.s_galeria {
     padding-bottom: 20rem;
@@ -2907,7 +2924,11 @@ body._minha-conta ._otherhalf ._card .row span {
     transform: none;
   }
   body._curso-detalhes section.s_hero ._curso-card {
-    display: none;
+    position: fixed;
+    top: inherit;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    z-index: 666;
   }
   body._blog section.s_blog-vertical {
     display: none;
@@ -2958,6 +2979,41 @@ body._minha-conta ._otherhalf ._card .row span {
   }
   body._cursos-e-eventos section.s_cursos {
     margin-bottom: 0;
+  }
+  body._experienciaDetalhes section.s_sobreOferta .container-fav {
+    flex-direction: column;
+  }
+  body._experienciaDetalhes section.s_sobreOferta ._marca {
+    top: -5rem;
+  }
+  body._experienciaDetalhes section.s_sobreOferta .container-fav ._right {
+    margin: 4rem 0;
+  }
+  body._quem-somos section.s_quem-somos ._diretores ._diretor {
+    flex-direction: column;
+    height: auto;
+    gap: 1.5rem;
+  }
+  body._quem-somos section.s_quem-somos ._diretores ._diretor main {
+    width: 100%;
+    height: auto;
+    padding: 25px;
+    margin: 0;
+    margin-top: -25px;
+  }
+  body._curso-detalhes
+    section.s_curso-conteudo.s_instrutores
+    .container-fav
+    ._instrutores {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  body._curso-detalhes
+    section.s_curso-conteudo.s_instrutores
+    .container-fav
+    ._instrutores
+    ._content {
+    max-width: 95%;
   }
 }
 

@@ -58,7 +58,7 @@ a {
 
 div._sidemenu {
   position: fixed;
-  top: 25px;
+  top: 0;
   right: 0;
 
   z-index: 666;
@@ -231,7 +231,51 @@ section._menu .container-fav ._user ._img {
 
   border-radius: 50%;
 }
-
+._menuMax {
+  display: none;
+  width: 100%;
+}
+._menuMax img {
+  margin-top: 3rem;
+  margin-left: 3rem;
+  border-radius: 50%;
+}
+section._mobileMenu {
+  top: 12.5rem;
+  left: -200vw;
+  height: auto;
+  width: 100%;
+  max-width: 75%;
+  position: absolute;
+  z-index: 666;
+  background-color: var(--gray19);
+}
+section._mobileMenu ._closeButton {
+  position: absolute;
+  top: 3rem;
+  right: 1.5rem;
+  height: 3.5rem;
+  width: 3.5rem;
+}
+section._mobileMenu .container-fav {
+  flex-direction: column;
+  height: 100%;
+  align-items: flex-start;
+  padding-left: 3rem;
+  gap: 3rem;
+}
+section._mobileMenu .container-fav ._user {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+section._mobileMenu .container-fav nav ul {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+section._mobileMenu .container-fav nav ul li {
+  width: 100%;
+}
 footer {
   padding-top: 9rem;
   padding-bottom: 9rem;
@@ -680,6 +724,17 @@ body._carrinho header .container-fav ._first {
   max-width: 74.5rem;
   justify-content: space-between;
 }
+
+body._carrinho .container-fav ._carButton {
+  display: none;
+  position: fixed;
+
+  padding: 2.5rem;
+  right: 3.5rem;
+  top: 3.5rem;
+  border-radius: 50%;
+  border: solid var(--gray11) 1px;
+}
 body._carrinho .container-fav ._half {
   display: flex;
   align-items: center;
@@ -739,6 +794,10 @@ section._meuCarrinho ._top ._title {
   gap: 1.6rem;
   color: var(--wine12);
   font-weight: 500;
+}
+
+section._meuCarrinho ._top ._title ._icon img:last-child {
+  display: none;
 }
 section._meuCarrinho ._top ._numberofItems {
   width: 3.6rem;
@@ -1242,6 +1301,13 @@ section.s_compraRealizada
 body._carrinho section.s_identificacao .container-fav ._half ._top {
   border-bottom: solid 2px var(--lightbrown);
 }
+body._carrinho section.s_identificacao .container-fav ._half ._top ._img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+body._carrinho section.s_identificacao .container-fav ._half ._top {
+  gap: 5px;
+}
 body._carrinho
   section.s_identificacao
   .container-fav
@@ -1249,6 +1315,8 @@ body._carrinho
   ._top
   ._title._active {
   border: none;
+}
+body._carrinho section.s_identificacao .container-fav ._half ._top .arrow {
 }
 body._carrinho section.s_identificacao .container-fav ._pagamento {
   width: 100%;
@@ -1566,8 +1634,50 @@ body._carrinho
   section._minhasMatriculas ._matriculasList {
     overflow-x: scroll;
   }
+
+  body._carrinho .container-fav ._carButton {
+    display: flex;
+  }
   section._meuCarrinho {
+    position: fixed;
+    top: -100vh;
+  }
+  section._meuCarrinho ._top ._title ._icon img:last-child {
+    display: inline;
+  }
+  section._meuCarrinho ._top ._title ._icon img:first-child {
     display: none;
+  }
+
+  section.s_compraRealizada .container-fav ._half ._buttons {
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+  }
+  section.s_compraRealizada {
+    padding-bottom: 5rem;
+  }
+
+  section._meusDados .container-fav {
+    flex-direction: column-reverse;
+    gap: 3rem;
+  }
+  section._meusDados .container-fav ._right ._dados {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+  section._meusDados .container-fav ._right ._dados .dados-div {
+    gap: 1.5rem;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  section._meusDados .container-fav ._dados ._dadosComponent {
+    max-width: 43rem;
+    padding-bottom: 4rem;
   }
 }
 
@@ -1581,6 +1691,21 @@ body._carrinho
   section.s_identificacao .container-fav ._half .content ._offtitle ._left {
     width: 100%;
   }
+
+  body._carrinho section.s_identificacao .container-fav ._pagamento ._buttons {
+    flex-direction: column;
+  }
+  body._carrinho
+    section.s_identificacao
+    .container-fav
+    ._pagamento
+    ._cupom
+    ._input
+    button {
+    height: 6.3rem;
+    width: 6.3rem;
+    padding: 0;
+  }
 }
 
 @media only screen and (max-width: 600px) {
@@ -1593,11 +1718,18 @@ body._carrinho
     align-items: center;
     gap: 4rem;
   }
-  section._menu .container-fav nav {
+  section._menu {
     display: none;
     padding: 2rem;
   }
+  ._menuMax {
+    display: inline;
+  }
   body._carrinho header .container-fav ._first ._duvidas {
     display: none;
+  }
+  section._meusPedidos ._pedidosList ._pedido ._status {
+    flex-direction: column;
+    align-items: center;
   }
 }

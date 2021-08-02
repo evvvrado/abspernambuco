@@ -329,3 +329,39 @@ $("body._minha-conta form button").click(() => {
   $("form input").val("");
   $("form textarea").val("");
 });
+
+$("._carButton").click(() => {
+  $("._meuCarrinho").animate(
+    {
+      top: "0",
+    },
+    400
+  );
+});
+$(" section._meuCarrinho ._top ._title ._icon img:last-child").click(() => {
+  $("._meuCarrinho").animate(
+    {
+      top: "-200vh",
+    },
+    400
+  );
+});
+
+$("._menuMax").click(() => {
+  $("._mobileMenu").css("display", "flex");
+  $("._mobileMenu").animate(
+    {
+      left: "0",
+    },
+    500
+  );
+});
+
+$("section._mobileMenu ._closeButton").click(() => {
+  $("._mobileMenu").animate(
+    {
+      left: "-200vw",
+    },
+    500
+  );
+});
