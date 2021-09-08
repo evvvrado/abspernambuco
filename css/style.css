@@ -115,11 +115,15 @@ div._sidemenu nav {
   flex-direction: column;
   background-color: var(--wine7);
   overflow: hidden;
-  max-height: 0;
-  transition: 2s;
+  height: 0;
 }
 div._sidemenu nav a {
-  padding: 25px 25px;
+  height: 80px;
+  width: 80px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 div._sidemenu nav a:first-child {
   padding-top: 34px;
@@ -443,6 +447,8 @@ section.s_hero .hero_cards div {
   background-color: var(--white);
   gap: 0.4rem;
   padding: 1rem 2.1rem 1.3rem 2.9rem;
+
+  cursor: default;
 }
 section.s_hero .hero_cards span {
   font-family: "Spartan", sans-serif;
@@ -553,12 +559,7 @@ body._imprensa .container-fav .title nav._filter {
   /* max-width: 47.1rem; */
 }
 
-body._cursos-e-eventos
-  section.s_cursos
-  .container-fav
-  .title
-  nav._filter
-  h2:first-child {
+body._cursos-e-eventos section.s_cursos .container-fav .title nav._filter h2:first-child {
   padding-right: 9rem;
   padding-left: 6.1rem;
 }
@@ -573,12 +574,7 @@ body._cursos-e-eventos section.s_cursos .container-fav .title nav._filter h2 {
   padding-right: 6.6rem;
 }
 
-body._cursos-e-eventos
-  section.s_cursos
-  .container-fav
-  .title
-  nav._filter
-  h2._active {
+body._cursos-e-eventos section.s_cursos .container-fav .title nav._filter h2._active {
   border-bottom: 3px solid var(--lightbrown);
 }
 body._cursos-e-eventos section.s_cursos .container-fav .title nav._filter {
@@ -600,12 +596,7 @@ section.s_cursos .container-fav .curso-group .curso-item .curso-pic {
   position: relative;
 }
 
-section.s_cursos
-  .container-fav
-  .curso-group
-  .curso-item
-  .curso-pic
-  .curso_online {
+section.s_cursos .container-fav .curso-group .curso-item .curso-pic .curso_online {
   position: absolute;
   top: 1.7rem;
   left: 1.6rem;
@@ -643,21 +634,10 @@ section.s_cursos .container-fav .curso-group .curso-item .curso-content .row {
   align-items: center;
   justify-content: center;
 }
-section.s_cursos
-  .container-fav
-  .curso-group
-  .curso-item
-  .curso-content
-  .row:first-child {
+section.s_cursos .container-fav .curso-group .curso-item .curso-content .row:first-child {
   gap: 1.8rem;
 }
-section.s_cursos
-  .container-fav
-  .curso-group
-  .curso-item
-  .curso-content
-  .row
-  .icon-group {
+section.s_cursos .container-fav .curso-group .curso-item .curso-content .row .icon-group {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -665,14 +645,7 @@ section.s_cursos
   height: 5rem;
   max-width: 6.4rem;
 }
-section.s_cursos
-  .container-fav
-  .curso-group
-  .curso-item
-  .curso-content
-  .row
-  .icon-group
-  span {
+section.s_cursos .container-fav .curso-group .curso-item .curso-content .row .icon-group span {
   font-family: "Share Tech";
   font-size: 1.6rem;
   line-height: 93.5%;
@@ -680,36 +653,17 @@ section.s_cursos
   color: var(--wine4);
 }
 
-section.s_cursos
-  .container-fav
-  .curso-group
-  .curso-item
-  .curso-content
-  .row
-  .text {
+section.s_cursos .container-fav .curso-group .curso-item .curso-content .row .text {
   display: flex;
 }
-section.s_cursos
-  .container-fav
-  .curso-group
-  .curso-item
-  .curso-content
-  .row
-  .text
-  span {
+section.s_cursos .container-fav .curso-group .curso-item .curso-content .row .text span {
   font-family: "Share Tech", sans-serif;
   font-size: 2.4rem;
   line-height: 93.5%;
   max-width: 17.6rem;
   margin-left: 1rem;
 }
-section.s_cursos
-  .container-fav
-  .curso-group
-  .curso-item
-  .curso-content
-  .row
-  .price {
+section.s_cursos .container-fav .curso-group .curso-item .curso-content .row .price {
   font-family: "Share Tech", sans-serif;
   font-size: 40px;
   line-height: 40px;
@@ -731,13 +685,7 @@ section.s_cursos .container-fav .content button.btn-primary {
   border: 1px solid #ff0052;
 }
 
-section.s_cursos
-  .container-fav
-  .curso-group
-  .curso-item
-  .curso-content
-  .row
-  button.btn-primary {
+section.s_cursos .container-fav .curso-group .curso-item .curso-content .row button.btn-primary {
   display: flex;
   align-items: center;
   justify-items: center;
@@ -926,7 +874,7 @@ section.s_numeros .container-fav .text button.btn-primary {
 }
 
 section.s_vantagens {
-  padding-top: 21.1rem;
+  padding-top: 5.1rem;
   padding-bottom: 17rem;
 }
 section.s_vantagens .container-fav {
@@ -976,29 +924,17 @@ section.s_vantagens .container-fav ._right .list .list-component::after {
   animation: movimentY ease-in-out 3s infinite alternate;
 }
 
-section.s_vantagens
-  .container-fav
-  ._right
-  .list
-  .list-component:first-child::after {
+section.s_vantagens .container-fav ._right .list .list-component:first-child::after {
   background-image: url(/img/pen.svg);
   background-repeat: no-repeat;
   background-position: center;
 }
-section.s_vantagens
-  .container-fav
-  ._right
-  .list
-  .list-component:nth-child(2)::after {
+section.s_vantagens .container-fav ._right .list .list-component:nth-child(2)::after {
   background-image: url(/img/ticket.svg);
   background-repeat: no-repeat;
   background-position: center;
 }
-section.s_vantagens
-  .container-fav
-  ._right
-  .list
-  .list-component:last-child::after {
+section.s_vantagens .container-fav ._right .list .list-component:last-child::after {
   background-image: url(/img/dollar.svg);
   background-repeat: no-repeat;
   background-position: center;
@@ -1083,26 +1019,13 @@ section.s_blog .container-fav .blog-group .blog-item .blog-content:hover {
   animation: none;
 }
 
-section.s_blog
-  .container-fav
-  .blog-group
-  .blog-item
-  .blog-content
-  .row
-  .icon-group {
+section.s_blog .container-fav .blog-group .blog-item .blog-content .row .icon-group {
   display: flex;
   align-items: center;
   gap: 0.65rem;
 }
 
-section.s_blog
-  .container-fav
-  .blog-group
-  .blog-item
-  .blog-content
-  .row
-  .icon-group
-  span {
+section.s_blog .container-fav .blog-group .blog-item .blog-content .row .icon-group span {
   font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -1110,12 +1033,7 @@ section.s_blog
   color: var(--gray8);
 }
 
-section.s_blog
-  .container-fav
-  .blog-group
-  .blog-item
-  .blog-content
-  button.btn-alternative {
+section.s_blog .container-fav .blog-group .blog-item .blog-content button.btn-alternative {
   padding: 1rem 2.4rem;
   height: 3.8rem;
   width: 11rem;
@@ -1246,13 +1164,7 @@ body._imprensa section.s_acessoria.s_contato .container-fav ._left form {
 
   gap: 1.5rem;
 }
-body._imprensa
-  section.s_acessoria.s_contato
-  .container-fav
-  ._left
-  form
-  label
-  input,
+body._imprensa section.s_acessoria.s_contato .container-fav ._left form label input,
 textarea {
   width: 100%;
   max-width: 38.4rem;
@@ -1269,23 +1181,11 @@ textarea {
   color: var(--gray9);
 }
 
-body._imprensa
-  section.s_acessoria.s_contato
-  .container-fav
-  ._left
-  form
-  label
-  textarea {
+body._imprensa section.s_acessoria.s_contato .container-fav ._left form label textarea {
   padding-top: 1.1rem;
   height: 11.1rem;
 }
-body._imprensa
-  section.s_acessoria.s_contato
-  .container-fav
-  ._left
-  form
-  label
-  input {
+body._imprensa section.s_acessoria.s_contato .container-fav ._left form label input {
   height: 4.8rem;
 }
 body._imprensa section.s_acessoria .container-fav ._left button.btn-primary {
@@ -1302,22 +1202,10 @@ body._imprensa section.s_acessoria .container-fav ._left button.btn-primary {
   margin-top: 2.4rem;
 }
 
-body._imprensa
-  section.s_acessoria.s_contato
-  .container-fav
-  ._left
-  form
-  button.btn-primary {
+body._imprensa section.s_acessoria.s_contato .container-fav ._left form button.btn-primary {
   max-width: 23.7rem;
 }
-body._imprensa
-  section.s_acessoria
-  .container-fav
-  ._left
-  form
-  button.btn-primary
-  .svg
-  img {
+body._imprensa section.s_acessoria .container-fav ._left form button.btn-primary .svg img {
   margin-left: 1.8rem;
 }
 body._quem-somos section.s_quem-somos {
@@ -1439,13 +1327,7 @@ body._blog section.s_blog-vertical .vertical-blog button.btn-alternative {
   margin-left: 5.5rem;
 }
 
-body._quem-somos
-  section.s_quem-somos
-  .container-fav
-  ._menu
-  nav
-  .nav-component
-  a {
+body._quem-somos section.s_quem-somos .container-fav ._menu nav .nav-component a {
   font-family: "Share Tech", sans-serif;
   font-size: 1.8rem;
   line-height: 2rem;
@@ -1454,12 +1336,7 @@ body._quem-somos
   color: #686868;
 }
 
-body._quem-somos
-  section.s_quem-somos
-  .container-fav
-  ._menu
-  nav
-  .nav-component._active {
+body._quem-somos section.s_quem-somos .container-fav ._menu nav .nav-component._active {
   border-bottom: 2px solid var(--wine1);
 }
 
@@ -1556,12 +1433,7 @@ body._curso-detalhes section.s_curso-conteudo .container-fav ._menu nav {
   height: 8.4rem;
   max-width: 70rem;
 }
-body._curso-detalhes
-  section.s_curso-conteudo
-  .container-fav
-  ._menu
-  nav
-  .nav-component {
+body._curso-detalhes section.s_curso-conteudo .container-fav ._menu nav .nav-component {
   width: 100%;
   height: 100%;
   text-align: center;
@@ -1574,13 +1446,7 @@ body._curso-detalhes
   gap: 1.7rem;
 }
 
-body._curso-detalhes
-  section.s_curso-conteudo
-  .container-fav
-  ._menu
-  nav
-  .nav-component
-  a {
+body._curso-detalhes section.s_curso-conteudo .container-fav ._menu nav .nav-component a {
   font-family: "Share Tech", sans-serif;
   font-size: 1.8rem;
   line-height: 2rem;
@@ -1589,20 +1455,11 @@ body._curso-detalhes
   color: #686868;
 }
 
-body._curso-detalhes
-  section.s_curso-conteudo
-  .container-fav
-  ._menu
-  nav
-  .nav-component._active {
+body._curso-detalhes section.s_curso-conteudo .container-fav ._menu nav .nav-component._active {
   border-bottom: 2px solid var(--wine1);
 }
 
-body._curso-detalhes
-  section.s_curso-conteudo
-  .container-fav
-  ._text
-  ._text-logo {
+body._curso-detalhes section.s_curso-conteudo .container-fav ._text ._text-logo {
   display: flex;
   margin-top: 5.3rem;
   gap: 10rem;
@@ -1663,8 +1520,8 @@ body._blog-post section.s_post nav.post_topbar .share_btn {
 
 footer {
   background: var(--background-gradient);
-  padding-top: 1.7rem;
-  padding-bottom: 2.3rem;
+  padding-top: 4.7rem;
+  padding-bottom: 4.7rem;
 }
 
 footer .container-fav .row {
@@ -1757,7 +1614,9 @@ footer .container-fav .row .novidades .input input {
 }
 footer .container-fav .row .novidades .input button {
   height: 4.5rem;
-  width: 4.5rem;
+  /* width: 4.5rem; */
+
+  width: 100%;
   background: var(--lightbrown);
   display: flex;
   align-items: center;
@@ -1868,6 +1727,8 @@ body._minha-conta header ._half .container-fav ._contact {
 
 body._minha-conta header ._half .container-fav ._contact ._c span {
   margin-left: 0.3rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
   font-size: 1.4rem;
 }
 body._minha-conta header ._half .container-fav ._credit p {
@@ -2000,16 +1861,10 @@ body._curso-detalhes section.s_curso-conteudo.s_instrutores {
   border-bottom: 1px solid var(--gray4);
   padding-bottom: 25rem;
 }
-body._curso-detalhes
-  section.s_curso-conteudo.s_instrutores
-  .container-fav
-  ._text {
+body._curso-detalhes section.s_curso-conteudo.s_instrutores .container-fav ._text {
   max-width: 100%;
 }
-body._curso-detalhes
-  section.s_curso-conteudo.s_instrutores
-  .container-fav
-  ._instrutores {
+body._curso-detalhes section.s_curso-conteudo.s_instrutores .container-fav ._instrutores {
   width: 100%;
   display: flex;
   align-items: center;
@@ -2017,27 +1872,16 @@ body._curso-detalhes
 
   margin-top: 4.2rem;
 }
-body._curso-detalhes
-  section.s_curso-conteudo.s_instrutores
-  .container-fav
-  .instrutor
-  .img {
+body._curso-detalhes section.s_curso-conteudo.s_instrutores .container-fav .instrutor .img {
   z-index: 2;
 }
 
-body._curso-detalhes
-  section.s_curso-conteudo.s_instrutores
-  .container-fav
-  .instrutor {
+body._curso-detalhes section.s_curso-conteudo.s_instrutores .container-fav .instrutor {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-body._curso-detalhes
-  section.s_curso-conteudo.s_instrutores
-  .container-fav
-  .instrutor
-  ._content {
+body._curso-detalhes section.s_curso-conteudo.s_instrutores .container-fav .instrutor ._content {
   position: relative;
   z-index: 3;
   width: 100%;
@@ -2054,34 +1898,21 @@ body._curso-detalhes
   box-shadow: 0px 9px 28px -1px rgba(232, 31, 96, 0.5);
   border-radius: 9px;
 }
-body._curso-detalhes
-  section.s_curso-conteudo.s_instrutores
-  .container-fav
-  .instrutor
-  ._content
-  p {
+body._curso-detalhes section.s_curso-conteudo.s_instrutores .container-fav .instrutor ._content p {
   font-size: 1.4rem;
   line-height: 160%;
   letter-spacing: 0.01em;
 
   color: var(--gray8);
 }
-body._curso-detalhes
-  section.s_curso-conteudo.s_instrutores
-  .container-fav
-  .instrutor
-  ._content
-  h2 {
+body._curso-detalhes section.s_curso-conteudo.s_instrutores .container-fav .instrutor ._content h2 {
   font-size: 3.6rem;
   line-height: 140%;
   /* or 50px */
 
   color: var(--gray9);
 }
-body._curso-detalhes
-  section.s_curso-conteudo.s_instrutores
-  .container-fav
-  ._map {
+body._curso-detalhes section.s_curso-conteudo.s_instrutores .container-fav ._map {
   margin-top: 3.4rem;
 }
 
@@ -2089,7 +1920,7 @@ body._galeria section.s_galeria {
   background: url("/img/backconfira.jpg");
   background-size: cover;
   padding-top: 11.6rem;
-  padding-bottom: 42.8rem;
+  padding-bottom: 12.8rem;
 }
 body._galerias._galeria section.s_galeria {
   background: none;
@@ -2101,7 +1932,6 @@ body._galerias._galeria section.s_galeria h2 {
 body._galeria section.s_galeria h2 {
   color: var(--white);
   padding-bottom: 3.8rem;
-  border-bottom: 2px var(--lightbrown) solid;
   width: 100%;
   max-width: 15rem;
 }
@@ -2146,6 +1976,7 @@ body._galeria section.s_galeria ._list ._img {
 body._galeria section.s_galeria ._list ._img:hover {
   transform: scale(1.2);
   opacity: 1;
+  z-index: 3;
 }
 body._galeria section.s_galeria main ._mainImage {
   width: 100%;
@@ -2280,19 +2111,8 @@ section.s_produtos .container-fav ._productlist ._product .content button span {
 
   margin-right: 0.832rem;
 }
-section.s_produtos
-  .container-fav
-  ._productlist
-  ._product
-  .content
-  span:last-child,
-section.s_produtos
-  .container-fav
-  ._productlist
-  ._product
-  .content
-  span:last-child
-  strong {
+section.s_produtos .container-fav ._productlist ._product .content span:last-child,
+section.s_produtos .container-fav ._productlist ._product .content span:last-child strong {
   font-family: "Inter";
   font-style: normal;
   font-weight: 600;
@@ -2302,13 +2122,7 @@ section.s_produtos
 
   text-align: center;
 }
-section.s_produtos
-  .container-fav
-  ._productlist
-  ._product
-  .content
-  span:last-child
-  strong {
+section.s_produtos .container-fav ._productlist ._product .content span:last-child strong {
   cursor: pointer;
   text-decoration: underline;
 }
@@ -2379,9 +2193,7 @@ section.s_descontos .container-fav ._descontoList {
   display: flex;
   justify-content: space-between;
 }
-section.s_descontos
-  .container-fav
-  ._descontoList:not(._descontoList:first-child) {
+section.s_descontos .container-fav ._descontoList:not(._descontoList:first-child) {
   margin-top: 5.5rem;
 }
 section.s_descontos .container-fav ._descontoList ._descontoItem {
@@ -2406,25 +2218,14 @@ section.s_descontos .container-fav ._descontoList ._descontoItem main {
 
   position: relative;
 }
-section.s_descontos
-  .container-fav
-  ._descontoList
-  ._descontoItem
-  main
-  .topcontent {
+section.s_descontos .container-fav ._descontoList ._descontoItem main .topcontent {
   display: flex;
   margin-top: -3.4rem;
   width: 100%;
   align-items: center;
   justify-content: space-evenly;
 }
-section.s_descontos
-  .container-fav
-  ._descontoList
-  ._descontoItem
-  main
-  .topcontent
-  ._exclusive {
+section.s_descontos .container-fav ._descontoList ._descontoItem main .topcontent ._exclusive {
   background-color: var(--wine9);
   display: flex;
   align-items: center;
@@ -2437,14 +2238,7 @@ section.s_descontos
 
   margin-left: 8.5rem;
 }
-section.s_descontos
-  .container-fav
-  ._descontoList
-  ._descontoItem
-  main
-  .topcontent
-  ._exclusive
-  span {
+section.s_descontos .container-fav ._descontoList ._descontoItem main .topcontent ._exclusive span {
   font-family: "Gilroy";
   font-weight: 400;
   font-size: 1.3rem;
@@ -2453,24 +2247,10 @@ section.s_descontos
 
   color: #ffffff;
 }
-section.s_descontos
-  .container-fav
-  ._descontoList
-  ._descontoItem
-  main
-  .topcontent
-  ._exclusive
-  .svg {
+section.s_descontos .container-fav ._descontoList ._descontoItem main .topcontent ._exclusive .svg {
   margin-left: -0.77rem;
 }
-section.s_descontos
-  .container-fav
-  ._descontoList
-  ._descontoItem
-  main
-  .topcontent
-  ._marca
-  img {
+section.s_descontos .container-fav ._descontoList ._descontoItem main .topcontent ._marca img {
   margin-left: 2rem;
   border-radius: 1.5rem;
 }
@@ -2480,13 +2260,7 @@ section.s_descontos .container-fav ._descontoList ._descontoItem main .content {
   text-align: center;
   padding-top: 3.1rem;
 }
-section.s_descontos
-  .container-fav
-  ._descontoList
-  ._descontoItem
-  main
-  .content
-  span {
+section.s_descontos .container-fav ._descontoList ._descontoItem main .content span {
   font-family: "Inter";
   font-style: normal;
   font-weight: 600;
@@ -2501,11 +2275,7 @@ body._experienciaDetalhes section.s_descontos {
   padding-bottom: 15.5rem;
   padding-top: 24rem;
 }
-section.s_descontos
-  .container-fav
-  ._descontoList
-  ._descontoItem
-  button.btn-primary {
+section.s_descontos .container-fav ._descontoList ._descontoItem button.btn-primary {
   height: 4.5rem;
   width: 100%;
   background: var(--button--gradient4);
@@ -2550,11 +2320,7 @@ body._experienciaDetalhes section.s_sobreOferta .container-fav ._left h2 {
   margin-bottom: 8.2rem;
 }
 
-body._experienciaDetalhes
-  section.s_sobreOferta
-  .container-fav
-  ._left
-  ._editableText {
+body._experienciaDetalhes section.s_sobreOferta .container-fav ._left ._editableText {
   margin-top: 4.3rem;
   max-height: 19.5rem;
   overflow: hidden;
@@ -2562,11 +2328,7 @@ body._experienciaDetalhes
   transition: 1s;
 }
 
-body._experienciaDetalhes
-  section.s_sobreOferta
-  .container-fav
-  ._left
-  ._readMore {
+body._experienciaDetalhes section.s_sobreOferta .container-fav ._left ._readMore {
   position: relative;
   width: 100%;
 
@@ -2583,11 +2345,7 @@ body._experienciaDetalhes
 
   transition: 1s;
 }
-body._experienciaDetalhes
-  section.s_sobreOferta
-  .container-fav
-  ._left
-  ._readMore._disable {
+body._experienciaDetalhes section.s_sobreOferta .container-fav ._left ._readMore._disable {
   box-shadow: none;
 }
 body._experienciaDetalhes section.s_sobreOferta .container-fav ._right {
@@ -2599,11 +2357,7 @@ body._experienciaDetalhes section.s_sobreOferta .container-fav ._right {
   flex-direction: column;
   align-items: center;
 }
-body._experienciaDetalhes
-  section.s_sobreOferta
-  .container-fav
-  ._right
-  ._validade {
+body._experienciaDetalhes section.s_sobreOferta .container-fav ._right ._validade {
   width: 100%;
 
   border: 1px solid #d1d0d0;
@@ -2621,43 +2375,23 @@ body._experienciaDetalhes
 
   color: var(--gray17);
 }
-body._experienciaDetalhes
-  section.s_sobreOferta
-  .container-fav
-  ._right
-  ._validade
-  ._title {
+body._experienciaDetalhes section.s_sobreOferta .container-fav ._right ._validade ._title {
   display: flex;
   gap: 1.1rem;
 
   align-items: center;
 }
-body._experienciaDetalhes
-  section.s_sobreOferta
-  .container-fav
-  ._right
-  ._validade
-  span:last-child {
+body._experienciaDetalhes section.s_sobreOferta .container-fav ._right ._validade span:last-child {
   font-family: "Inter";
   line-height: 150%;
   margin-left: 3.6rem;
 }
 
-body._experienciaDetalhes
-  section.s_sobreOferta
-  .container-fav
-  ._right
-  ._validade
-  ._title
-  h2 {
+body._experienciaDetalhes section.s_sobreOferta .container-fav ._right ._validade ._title h2 {
   font-size: 2.4rem;
 }
 
-body._experienciaDetalhes
-  section.s_sobreOferta
-  .container-fav
-  ._right
-  ._buttonCamp {
+body._experienciaDetalhes section.s_sobreOferta .container-fav ._right ._buttonCamp {
   width: 100%;
 
   display: flex;
@@ -2679,12 +2413,7 @@ body._experienciaDetalhes
   background: var(--button--gradient2);
   padding: 1rem 9.9rem 1rem 9.9rem;
 }
-body._experienciaDetalhes
-  section.s_sobreOferta
-  .container-fav
-  ._right
-  ._buttonCamp
-  p {
+body._experienciaDetalhes section.s_sobreOferta .container-fav ._right ._buttonCamp p {
   font-size: 1.4rem;
   line-height: 150%;
   margin-top: 0.8rem;
@@ -2696,22 +2425,11 @@ body._experienciaDetalhes section.s_sobreOferta .container-fav ._right ._share {
 
   margin-top: 3rem;
 }
-body._experienciaDetalhes
-  section.s_sobreOferta
-  .container-fav
-  ._right
-  ._share
-  ._btns {
+body._experienciaDetalhes section.s_sobreOferta .container-fav ._right ._share ._btns {
   display: flex;
   align-items: center;
 }
-body._experienciaDetalhes
-  section.s_sobreOferta
-  .container-fav
-  ._right
-  ._share
-  ._btns
-  ._logo {
+body._experienciaDetalhes section.s_sobreOferta .container-fav ._right ._share ._btns ._logo {
   padding-right: 1.8rem;
   padding-left: 1.8rem;
 }
@@ -2913,11 +2631,7 @@ body._minha-conta ._otherhalf ._card .row span {
   body._galeria section.s_galeria {
     padding-bottom: 20rem;
   }
-  body._curso-detalhes
-    section.s_curso-conteudo
-    .container-fav
-    ._text
-    ._text-logo {
+  body._curso-detalhes section.s_curso-conteudo .container-fav ._text ._text-logo {
     flex-direction: column;
   }
   body._curso-detalhes section.s_curso-conteudo .container-fav ._menu {
@@ -3001,10 +2715,7 @@ body._minha-conta ._otherhalf ._card .row span {
     margin: 0;
     margin-top: -25px;
   }
-  body._curso-detalhes
-    section.s_curso-conteudo.s_instrutores
-    .container-fav
-    ._instrutores {
+  body._curso-detalhes section.s_curso-conteudo.s_instrutores .container-fav ._instrutores {
     flex-direction: column;
     gap: 2rem;
   }
@@ -3014,6 +2725,21 @@ body._minha-conta ._otherhalf ._card .row span {
     ._instrutores
     ._content {
     max-width: 95%;
+  }
+
+  body._minha-conta header ._forgot span,
+  body._minha-conta header ._tologin span,
+  body._minha-conta header ._forgot span strong,
+  body._minha-conta header ._tologin span strong,
+  body._minha-conta header ._toregister span,
+  body._minha-conta header ._half .container-fav ._back p,
+  body._minha-conta header form label input,
+  body._minha-conta header form label textarea {
+    font-size: 1.8rem !important;
+  }
+  body._minha-conta header form label input,
+  body._minha-conta header form label textarea {
+    padding-top: 2.5rem;
   }
 }
 
@@ -3049,6 +2775,11 @@ body._minha-conta ._otherhalf ._card .row span {
     flex-direction: column;
     gap: 3rem;
   }
+
+  section.s_numeros .container-fav .text .number-card .cards:first-child::before,
+  section.s_numeros .container-fav .text .number-card .cards:last-child::before {
+    top: 0;
+  }
 }
 
 @keyframes moviment {
@@ -3082,3 +2813,24 @@ body._minha-conta ._otherhalf ._card .row span {
 
 /* -webkit-transition: background-image 0.2s ease-in-out;
 transition: background-image 0.2s ease-in-out; */
+
+div._toUp {
+  height: 65px;
+  width: 65px;
+  position: FIXED;
+  z-index: 665;
+  transition: 0.32s;
+  bottom: 12px;
+  right: 12px;
+  transform: rotate(-90deg);
+  background: #d9a863;
+  border-radius: 5000px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+div._toUp:hover {
+  transform: scale(1.1) rotate(-90deg);
+  cursor: pointer;
+}

@@ -3,10 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="Description" />
     <meta name="keywords" content="KeyWords" />
     <meta name="author" content="Everaldo Cristiano Reis Júnior" />
@@ -59,8 +56,7 @@
             <p>Voltar a página principal</p>
           </a>
           <div class="_text">
-            Bem-vindo de volta, digite suas credenciais para fazer login com
-            segurança em sua conta.
+            Bem-vindo de volta, digite suas credenciais para fazer login com segurança em sua conta.
           </div>
           <div class="_contact">
             <div class="_c">
@@ -137,15 +133,23 @@
             <form method="POST" onsubmit="return false">
               <label>
                 <span>Nome</span>
-                <input type="name" />
+                <input type="name" name="nome" maxlenght="50" required />
               </label>
               <label>
                 <span>Digite seu e-mail</span>
-                <input type="email" />
+                <input type="email" name="email" maxlenght="50" required />
+              </label>
+              <label>
+                <span>Digite sua senha</span>
+                <input type="password" name="senha" required />
+              </label>
+              <label>
+                <span>Digite seu CPF</span>
+                <input type="cpf" name="cpf" maxlenght="15" required />
               </label>
               <label>
                 <span>Telefone</span>
-                <input type="tel" />
+                <input type="tel" name="telefone" maxlenght="15" required />
               </label>
               <button>Cadastrar<img src="/img/arrowlong.svg" alt="" /></button>
             </form>
@@ -183,9 +187,24 @@
       </div>
     </header>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/js/all.min.js "></script>
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery-ui.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/js/all.min.js "></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"
+      integrity="sha512-pHVGpX7F/27yZ0ISY+VVjyULApbDlD0/X0rgGbTqCE7WFW5MezNTWG/dnhtbBuICzsd0WQPgpE4REBLv+UqChw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"
+      integrity="sha512-0XDfGxFliYJPFrideYOoxdgNIvrwGTLnmK20xZbCAvPfLGQMzHUsaqZK8ZoH+luXGRxTrS46+Aq400nCnAT0/w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
 
     <script src="js/main.js"></script>
   </body>

@@ -7,8 +7,7 @@ $('a[href*="#"]')
   .click(function (event) {
     // On-page links
     if (
-      location.pathname.replace(/^\//, "") ==
-        this.pathname.replace(/^\//, "") &&
+      location.pathname.replace(/^\//, "") == this.pathname.replace(/^\//, "") &&
       location.hostname == this.hostname
     ) {
       // Figure out element to scroll to
@@ -88,89 +87,52 @@ debounce = function (func, wait, immediate) {
 
 // CÓDIGO DE FILTRO EM CURSOS E EVENTOS
 
-$("section.s_cursos .container-fav .title ._filter h2._cursosbutton").click(
-  () => {
-    $("section.s_cursos .container-fav .title ._filter h2").removeClass(
-      "_active"
-    );
+$("section.s_cursos .container-fav .title ._filter h2._cursosbutton").click(() => {
+  $("section.s_cursos .container-fav .title ._filter h2").removeClass("_active");
 
-    $(
-      "section.s_cursos .container-fav .title ._filter h2._cursosbutton"
-    ).addClass("_active");
+  $("section.s_cursos .container-fav .title ._filter h2._cursosbutton").addClass("_active");
 
-    $("body._cursos-e-eventos section.s_cursos ._cursos").css(
-      "display",
-      "block"
-    );
-    $("body._cursos-e-eventos section.s_cursos ._eventos").css(
-      "display",
-      "none"
-    );
-  }
-);
+  $("body._cursos-e-eventos section.s_cursos ._cursos").css("display", "block");
+  $("body._cursos-e-eventos section.s_cursos ._eventos").css("display", "none");
+});
 
-$("section.s_cursos .container-fav .title ._filter h2._eventosbutton").click(
-  () => {
-    $("section.s_cursos .container-fav .title ._filter h2").removeClass(
-      "_active"
-    );
+$("section.s_cursos .container-fav .title ._filter h2._eventosbutton").click(() => {
+  $("section.s_cursos .container-fav .title ._filter h2").removeClass("_active");
 
-    $(
-      "section.s_cursos .container-fav .title ._filter h2._eventosbutton"
-    ).addClass("_active");
+  $("section.s_cursos .container-fav .title ._filter h2._eventosbutton").addClass("_active");
 
-    $("body._cursos-e-eventos section.s_cursos ._eventos").css(
-      "display",
-      "block"
-    );
-    $("body._cursos-e-eventos section.s_cursos ._cursos").css(
-      "display",
-      "none"
-    );
-  }
-);
+  $("body._cursos-e-eventos section.s_cursos ._eventos").css("display", "block");
+  $("body._cursos-e-eventos section.s_cursos ._cursos").css("display", "none");
+});
 
 // IMPRENSA E CONTATO
 
-$("body._imprensa  .container-fav .title ._filter h2._cursosbutton").click(
-  () => {
-    $("body._imprensa  .container-fav .title ._filter h2").removeClass(
-      "_active"
-    );
+$("body._imprensa  .container-fav .title ._filter h2._cursosbutton").click(() => {
+  $("body._imprensa  .container-fav .title ._filter h2").removeClass("_active");
 
-    $(
-      "body._imprensa  .container-fav .title ._filter h2._cursosbutton"
-    ).addClass("_active");
+  $("body._imprensa  .container-fav .title ._filter h2._cursosbutton").addClass("_active");
 
-    $("body._imprensa   .s_acessoria").css("display", "block");
-    $("body._imprensa   .s_acessoria.s_contato").css("display", "none");
-  }
-);
+  $("body._imprensa   .s_acessoria").css("display", "block");
+  $("body._imprensa   .s_acessoria.s_contato").css("display", "none");
+});
 
-$(" body._imprensa .container-fav .title ._filter h2._eventosbutton").click(
-  () => {
-    $("body._imprensa  .container-fav .title ._filter h2").removeClass(
-      "_active"
-    );
+$(" body._imprensa .container-fav .title ._filter h2._eventosbutton").click(() => {
+  $("body._imprensa  .container-fav .title ._filter h2").removeClass("_active");
 
-    $(
-      "body._imprensa  .container-fav .title ._filter h2._eventosbutton"
-    ).addClass("_active");
+  $("body._imprensa  .container-fav .title ._filter h2._eventosbutton").addClass("_active");
 
-    $("body._imprensa   .s_acessoria.s_contato").css("display", "block");
-    $("body._imprensa   .s_acessoria:not(.s_contato)").css("display", "none");
-  }
-);
+  $("body._imprensa   .s_acessoria.s_contato").css("display", "block");
+  $("body._imprensa   .s_acessoria:not(.s_contato)").css("display", "none");
+});
 
 // SIDE MENU ANIMATION
 
 $("header main button.hamburguer-menu").click(() => {
-  $("div._sidemenu nav").animate(
-    {
-      maxHeight: "100%",
-    },
-    500
-  );
+  $("div._sidemenu nav").css("height", "100%");
+});
+
+$("div._sidemenu nav .hamburguerClose").click(() => {
+  $("div._sidemenu nav").css("height", "0");
 });
 
 $("form label input,form label textarea").focus(function () {
@@ -209,11 +171,9 @@ $("body._galeria section.s_galeria main ._arrow:first-child").click(() => {
     `/img/_gallery${gallerySelectedImage}.jpg`
   );
   $(`body._galeria section.s_galeria ._list ._img`).removeClass("_active");
-  $(
-    `body._galeria section.s_galeria ._list ._img:nth-child(${
-      gallerySelectedImage - 1
-    })`
-  ).addClass("_active");
+  $(`body._galeria section.s_galeria ._list ._img:nth-child(${gallerySelectedImage - 1})`).addClass(
+    "_active"
+  );
 });
 $("body._galeria section.s_galeria main ._arrow:last-child").click(() => {
   if (gallerySelectedImage + 1 >= 9) return 0;
@@ -223,44 +183,34 @@ $("body._galeria section.s_galeria main ._arrow:last-child").click(() => {
     `/img/_gallery${gallerySelectedImage}.jpg`
   );
   $(`body._galeria section.s_galeria ._list ._img`).removeClass("_active");
-  $(
-    `body._galeria section.s_galeria ._list ._img:nth-child(${
-      gallerySelectedImage - 1
-    })`
-  ).addClass("_active");
+  $(`body._galeria section.s_galeria ._list ._img:nth-child(${gallerySelectedImage - 1})`).addClass(
+    "_active"
+  );
 });
 
-$("section.s_produtos .container-fav ._productlist ._product .content").hover(
-  function () {
-    $(this).parent().find("._hover").css("transform", "translateY(0)");
+$("section.s_produtos .container-fav ._productlist ._product .content").hover(function () {
+  $(this).parent().find("._hover").css("transform", "translateY(0)");
+});
+
+$("section.s_descontos .container-fav ._descontoList ._descontoItem button.btn-primary ").click(
+  () => {
+    window.location.href = "/experiencias-detalhes.html";
   }
 );
 
-$(
-  "section.s_descontos .container-fav ._descontoList ._descontoItem button.btn-primary "
-).click(() => {
-  window.location.href = "/experiencias-detalhes.html";
-});
-
-$(
-  "body._experienciaDetalhes section.s_sobreOferta .container-fav ._left ._readMore"
-).click(() => {
-  $(
-    "body._experienciaDetalhes section.s_sobreOferta .container-fav ._editableText"
-  ).animate(
+$("body._experienciaDetalhes section.s_sobreOferta .container-fav ._left ._readMore").click(() => {
+  $("body._experienciaDetalhes section.s_sobreOferta .container-fav ._editableText").animate(
     {
       maxHeight: "100%",
     },
     1000
   );
-  $(
-    "body._experienciaDetalhes section.s_sobreOferta .container-fav ._left ._readMore"
-  ).addClass("_disable");
+  $("body._experienciaDetalhes section.s_sobreOferta .container-fav ._left ._readMore").addClass(
+    "_disable"
+  );
 });
 
-$(
-  "body._curso-detalhes section.s_hero ._curso-card .row button.btn-primary"
-).click(() => {
+$("body._curso-detalhes section.s_hero ._curso-card .row button.btn-primary").click(() => {
   window.location.href = "/carrinho-identificacao.html";
 });
 
@@ -364,4 +314,70 @@ $("section._mobileMenu ._closeButton").click(() => {
     },
     500
   );
+});
+
+$(document).scroll(() => {
+  if ($(document).width() < 730) return;
+  if ($(document).scrollTop() > 400) {
+    $("._curso-card").css("position", "fixed");
+    $("._curso-card").css("top", "inherit");
+    $("._curso-card").css("right", "1.5rem");
+    $("._curso-card").css("bottom", "1.5rem");
+  } else if ($(document).scrollTop() < 400) {
+    $("._curso-card").css("position", "absolute");
+    $("._curso-card").css("top", "4rem");
+    $("._curso-card").css("right", "0");
+    $("._curso-card").css("bottom", "inherit");
+  }
+});
+
+var images = Array("/img/bannerhero.jpg", "/img/bannerhero2.jpg");
+
+// Usage:
+
+var currimg = 0;
+
+$(document).ready(function () {
+  if ($("body._home").length) {
+    function loadimg() {
+      $(".s_hero").animate({ opacity: 1 }, 700, function () {
+        //finished animating, minifade out and fade new back in
+        $(".s_hero").animate({ opacity: 0.7 }, 100, function () {
+          currimg++;
+
+          if (currimg > images.length - 1) {
+            $(".hero_indicator div img").attr("src", "/img/heroindicator_B.svg");
+            $(".hero_indicator div:first-child img").attr("src", "/img/heroindicator_A.svg");
+
+            currimg = 0;
+          } else {
+            $(".hero_indicator div img").attr("src", "/img/heroindicator_B.svg");
+            $(".hero_indicator div:nth-child(2) img").attr("src", "/img/heroindicator_A.svg");
+          }
+
+          var newimage = images[currimg];
+
+          //swap out bg src
+          $(".s_hero").css("background-image", "url(" + newimage + ")"); //animate fully back in
+          $(".s_hero").animate({ opacity: 1 }, 400, function () {
+            //set timer for next
+            setTimeout(loadimg, 5000);
+          });
+        });
+      });
+    }
+    setTimeout(loadimg, 5000);
+  }
+});
+
+$("div._toUp").click(() => {
+  $(document).scrollTop(0);
+});
+
+// MASCARAS PARA OS FORMULARIOS
+$(document).ready(function () {
+  $('form label input[name = "cpf"]').mask("000.000.000-00", { reverse: true });
+  $('form label input[name = "telefone"]').mask("(00) 00000-0000");
+  // $('form label input[name = "expiracao"]').mask("00/0000");
+  // $('form label input[name= "numero"]').mask("0000 000000 00000");
 });
